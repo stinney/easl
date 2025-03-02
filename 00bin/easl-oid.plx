@@ -16,9 +16,9 @@ my @o = `cat o-p-e.tsv`; chomp @o;
 my %o = ();
 foreach (@o) {
     my($o,$p,$e) = split(/\t/,$_);
-    $o{$e} = [ $o , $p ];
+    $o{$e} = [ $o , $p ] unless $o{$e};
 }
-my @e = `cat easl.tsv`; chomp @e;
+my @e = `cat easl-base.tsv`; chomp @e;
 my %e = ();
 foreach (@e) {
     my($e,$t,$n,$f) = split(/\t/,$_);
