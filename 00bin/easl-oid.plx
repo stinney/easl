@@ -25,12 +25,18 @@ foreach (@e) {
     $n =~ s/\|3$/3|/;
     my $nn = $n; $nn =~ tr/|//d;
     my $nnn = $n; $nnn =~ tr/'/’/;
+    my $o = '';
     if ($o{$n}) {
+	$o = $o{$n};
     } elsif ($o{$nn}) {
+	$o = $o{$nn};
     } elsif ($o{$nnn}) {
+	$o = $o{$nnn};
     } else {
 	warn "$e: $n not found in o-p-e.tsv\n";
     }
+    my ($po, $pp) = @$o;
+    print "$po\t$pp\t$_\n";
 }
 
 1;
