@@ -12,20 +12,20 @@ use Getopt::Long;
 GetOptions(
     );
 
-my $sl = 'easl';
+my $sl = 'easl'; my $SL = 'EASL';
 my @sl = ();
 
 my $fm = "$sl-codes.tsv";
-my %fm = load_map($fm, 1,0); my %fm_seen = ();
+my %fm = load_map($fm, 1, 0); my %fm_seen = ();
 
 my $nm = "$sl-notes.tsv";
-my %nm = load_map($nm,0,0);
+my %nm = load_map($nm,0, 0);
 
 my $rm = "$sl-rows.tsv";
-my %rm = load_map($rm, 1,0); my %rm_seen = ();
+my %rm = load_map($rm, 1, 0); my %rm_seen = ();
 
 my $sm = "$sl-names.tsv";
-my %sm = load_map($sm, 0,0);
+my %sm = load_map($sm, 0, 0);
 
 my %f = ();
 my %seen = ();
@@ -36,7 +36,7 @@ while (<>) {
     chomp;
     warn "$0: duplicate slframe entry $_\n" and next if $seen{$_}++;
     $sign_flag = s/◀//;
-    my($sl,$num,$sub,$feat) = (/^($sl)(\d{3})(·?[a-z]+)?(\.\S+)?/o);
+    my($sl,$num,$sub,$feat) = (/^($SL)(\d{3,4})(·?[a-z]+)?(\.\S+)?/o);
     $sub = '-' unless $sub;
     $feat = '-' unless $feat;
     if ($sl) {
