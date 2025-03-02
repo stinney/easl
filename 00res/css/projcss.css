@@ -1,0 +1,13 @@
+@import url(/css/fonts.css);
+@import url(/edur/css/borders.css);
+
+.lname { text-align: left; vertical-align: middle; }
+.names { vertical-align: top; }
+.sname { text-align: left; }
+.uname { text-align: left; }
+.glyph { text-align: right; }
+.image { vertical-align: top; }
+.notes { font-size: 80%; text-align: left; }
+.inner td { border-bottom: 0px !important; }
+
+.fs-275 { font-size: 275%; }

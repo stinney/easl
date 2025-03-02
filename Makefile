@@ -30,7 +30,7 @@ rows: 00raw/${SL}-rows.tsv
 html: 00web/sltab.html
 
 00web/sltab.html: 00raw/*
-	sudo cp 00res/css/*.css /home/oracc/www/$SL/css/
+	sudo cp 00res/css/*.css /home/oracc/www/${SL}/css/
 	00bin/h.sh
-	cp 00web/sltab.html /home/oracc/www/easl
-	sudo chmod -R +r /home/oracc/www/edur /home/oracc/www/fonts
+	cp 00web/sltab.html /home/oracc/www/${SL}
+	sudo chmod -R +r /home/oracc/www/${SL} /home/oracc/www/fonts
