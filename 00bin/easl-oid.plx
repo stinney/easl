@@ -12,6 +12,10 @@ use Getopt::Long;
 GetOptions(
     );
 
+my %oidforce = (
+    '|DUG~bxU2~b|'=>'o0900450'
+    );
+
 my @o = `cat 00etc/o-p-e.tsv`; chomp @o;
 my %o = (); my %oo = ();
 foreach (@o) {
@@ -29,7 +33,9 @@ foreach (@e) {
     my $nn = $n; $nn =~ tr/|//d;
     my $nnn = $n; $nnn =~ tr/'/’/;
     my $o = '';
-    if ($o{$n}) {
+    if ($oidforce{$n}) {
+	$o = [ $oidforce{$n} , ${$oo{$oidforce{$n}}}[1] ];
+    } elsif ($o{$n}) {
 	$o = $o{$n};
     } elsif ($o{$nn}) {
 	$o = $o{$nn};

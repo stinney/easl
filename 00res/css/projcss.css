@@ -5,6 +5,7 @@
 .names { vertical-align: top; }
 .sname { text-align: left; }
 .uname { text-align: left; }
+.rglyf { text-align: left; padding-left: .5em; padding-top: .25em; }
 .glyph { text-align: right; }
 .image { vertical-align: top; }
 .notes { font-size: 80%; text-align: left; }

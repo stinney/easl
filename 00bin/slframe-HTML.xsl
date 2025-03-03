@@ -5,7 +5,7 @@
       <head>
 	<meta charset="utf-8"/>
 	<title><xsl:value-of select="@n"/>Font and List</title>
-	<link media="screen,projection" href="/edur/css/projcss.css" type="text/css" rel="stylesheet"/>
+	<link media="screen,projection" href="/easl/css/projcss.css" type="text/css" rel="stylesheet"/>
       </head>
       <body>
 	<table class="sltab borders">
@@ -44,16 +44,21 @@
 	    <div class="names">
 	      <div class="sname"><xsl:value-of select="@sn"/></div>
 	      <div class="uname"><xsl:value-of select="@u"/></div>
+	      <xsl:if test="f">
+		<div class="rglyf"><span class="ofs-pc ofs-200"><xsl:value-of select="@c"/></span></div>
+	      </xsl:if>
 	      <div class="notes"><p><xsl:value-of select="n"/></p></div>
 	    </div>
 	  </td>
-	  <td class="ofs-pc ofs-300">
+	  <td class="ofs-pc ofs-200">
 	    <div>
-	      <div>
-		<span class="{@class}">
-		  <xsl:value-of select="@c"/>
-		</span>
-	      </div>
+	      <xsl:if test="not(f)">
+		<div>
+		  <span class="{@class}">
+		    <xsl:value-of select="@c"/>
+		  </span>
+		</div>
+	      </xsl:if>
 	      <xsl:for-each select="f">
 		<div>
 		  <span class="{@class}"><xsl:value-of select="@c"/></span>
