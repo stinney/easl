@@ -2,7 +2,7 @@ SL=easl
 SLfont=PC-all.ttf
 WWW=/home/oracc/www/${SL}
 
-default: easl frame codes salts names notes images rows font html
+default: easl frame codes salts names notes images oids rows font html
 
 easl: 00etc/easl.tsv
 
@@ -19,9 +19,11 @@ notes: 00raw/${SL}-notes.tsv
 images:
 	00bin/images.sh
 
-font: /home/oracc/www/fonts/${SLfont}
+oids: 00raw/${SL}-oids.tsv
 
 rows: 00raw/${SL}-rows.tsv
+
+font: /home/oracc/www/fonts/${SLfont}
 
 00etc/easl.tsv: 00etc/gh-index.xml 00bin/gh-cpc-tsv.xsl 00bin/easl-*.plx
 	xsltproc 00bin/gh-cpc-tsv.xsl 00etc/gh-index.xml >01tmp/easl-gh.tsv
@@ -38,13 +40,16 @@ rows: 00raw/${SL}-rows.tsv
 	cut -f 2 $< >$@
 
 00raw/easl-names.tsv: 00etc/${SL}.tsv Makefile
-	cut -f 3,8 $< | rocox -C21 >$@
+	00bin/easl-names.plx >$@
 
 00raw/easl-codes.tsv: 00etc/${SL}.tsv
 	cut -f 2,8 $< >$@
 
 00raw/easl-salts.log: 00etc/nc-cdli.tsv 00raw/easl-frame.lst
 	00bin/easl-salts.plx >$@
+
+00raw/easl-oids.tsv: 00etc/${SL}.tsv Makefile
+	cut -f 1,2 $< | rocox -C21 >$@
 
 00raw/easl-rows.tsv: 00etc/${SL}.tsv Makefile
 	cut -f 1,2 $< | sed "s#^\(o[0-9]\+\)#/easl/images/\1.jpg#" | rocox -C21 >$@
@@ -59,5 +64,5 @@ html: 00web/sltab.html
 	sudo mkdir -p ${WWW}/css
 	sudo cp 00res/css/*.css ${WWW}/css/
 	00bin/h.sh
-	sudo cp 00web/sltab.html ${WWW}
+	sudo cp 00web/sltab*.html ${WWW}
 	sudo chmod -R +r ${WWW} /home/oracc/www/fonts

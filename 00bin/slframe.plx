@@ -27,6 +27,9 @@ my %rm = load_map($rm, 1, 0); my %rm_seen = ();
 my $sm = "$sl-names.tsv";
 my %sm = load_map($sm, 0, 0);
 
+my $om = "$sl-oids.tsv";
+my %om = load_map($om, 0, 0);
+
 my %f = ();
 my %seen = ();
 my $sign_flag = 0;
@@ -59,6 +62,11 @@ print "<sl n=\"$sl\">";
 foreach (@sl) {
 
     my $ln = $_;
+    my $o = $om{$ln};
+    if ($o) {
+	$o = " oid=\"$o\"";
+    }
+    
     my $r = $rm{$ln};
     if ($r) {
 	++$rm_seen{$ln};
@@ -67,7 +75,7 @@ foreach (@sl) {
 	$r = '';
     }
 
-    print "<sign n=\"$ln\" xml:id=\"s.$ln\"$r>";
+    print "<sign n=\"$ln\" xml:id=\"s.$ln\"$o$r>";
     my @subs = keys %{$f{$ln}};
     foreach my $s (sort @subs) {
 	my $ss = ($s eq '-' ? '' : $s);
@@ -135,6 +143,8 @@ sub feachr {
 	if ($sm{$h}) {
 	    my $xn = xmlify($sm{$h});
 	    $sn = " sn=\"$xn\"";
+	} else {
+	    warn "$sm: no name found for $h\n";
 	}
     }
     ($fc,$c,$sn);

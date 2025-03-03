@@ -12,3 +12,5 @@
 .inner td { border-bottom: 0px !important; }
 
 .fs-275 { font-size: 275%; }
+
+td a { text-decoration: none; }

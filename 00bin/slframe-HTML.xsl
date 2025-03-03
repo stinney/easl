@@ -1,10 +1,16 @@
 <xsl:transform xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0"
 	       xmlns="http://www.w3.org/1999/xhtml">
+  <xsl:param name="mode" select="'full'"/> <!-- or nc for non-contrastive only -->
   <xsl:template match="/">
+    <xsl:variable name="title-sub">
+      <xsl:if test="$mode='nc'">
+	<xsl:text> NC</xsl:text>
+      </xsl:if>
+    </xsl:variable>
     <html>
       <head>
 	<meta charset="utf-8"/>
-	<title><xsl:value-of select="@n"/>Font and List</title>
+	<title><xsl:value-of select="@n"/><xsl:text>EASL</xsl:text><xsl:value-of select="$title-sub"/></title>
 	<link media="screen,projection" href="/easl/css/projcss.css" type="text/css" rel="stylesheet"/>
       </head>
       <body>
@@ -17,7 +23,14 @@
 	      <th class="image">Row</th>
 	    </tr>
 	  </thead>
-	  <xsl:apply-templates/>
+	  <xsl:choose>
+	    <xsl:when test="$mode='full'">
+	      <xsl:apply-templates select="sl/sign"/>
+	    </xsl:when>
+	    <xsl:otherwise>
+	      <xsl:apply-templates select="sl/sign[s/f]"/>
+	    </xsl:otherwise>
+	  </xsl:choose>
 	</table>
       </body>
     </html>
@@ -41,14 +54,16 @@
 	    </xsl:otherwise>
 	  </xsl:choose>
 	  <td>
-	    <div class="names">
-	      <div class="sname"><xsl:value-of select="@sn"/></div>
-	      <div class="uname"><xsl:value-of select="@u"/></div>
-	      <xsl:if test="f">
-		<div class="rglyf"><span class="ofs-pc ofs-200"><xsl:value-of select="@c"/></span></div>
-	      </xsl:if>
-	      <div class="notes"><p><xsl:value-of select="n"/></p></div>
-	    </div>
+	    <a href="/pcsl/{../@oid}" target="_blank">
+	      <div class="names">
+		<div class="sname"><xsl:value-of select="@sn"/></div>
+		<div class="uname"><xsl:value-of select="@u"/></div>
+		<xsl:if test="f">
+		  <div class="rglyf"><span class="ofs-pc ofs-200"><xsl:value-of select="@c"/></span></div>
+		</xsl:if>
+		<div class="notes"><p><xsl:value-of select="n"/></p></div>
+	      </div>
+	    </a>
 	  </td>
 	  <td class="ofs-pc ofs-200">
 	    <div>
