@@ -13,15 +13,18 @@ GetOptions(
     );
 
 my @o = `cat 00etc/o-p-e.tsv`; chomp @o;
-my %o = ();
+my %o = (); my %oo = ();
 foreach (@o) {
     my($o,$p,$e) = split(/\t/,$_);
     $o{$e} = [ $o , $p ] unless $o{$e};
+    $oo{$o} = [ $e , $p ];
 }
-my @e = `cat 00etc/easl-base.tsv`; chomp @e;
+
+my %seen = ();
+my @e = `cat 01tmp/easl-gh.tsv`; chomp @e;
 my %e = ();
 foreach (@e) {
-    my($e,$t,$n,$f) = split(/\t/,$_);
+    my($t,$n,$f) = split(/\t/,$_); # $e,
     $n =~ s/\|3$/3|/;
     my $nn = $n; $nn =~ tr/|//d;
     my $nnn = $n; $nnn =~ tr/'/’/;
@@ -33,10 +36,22 @@ foreach (@e) {
     } elsif ($o{$nnn}) {
 	$o = $o{$nnn};
     } else {
-	warn "$e: $n not found in o-p-e.tsv\n";
+	warn "$n not found in o-p-e.tsv\n";
     }
     my ($po, $pp) = @$o;
     print "$po\t$pp\t$_\n";
+    ++$seen{$po};
 }
+
+#open(D,'>seen.dump'); print D Dumper \%seen; close(D);
+
+#open(S,'>00etc/salt-oid.tsv');
+#foreach (sort keys %oo) {
+#    unless ($seen{$_}) {
+#	my ($e,$p) = @{$oo{$_}};
+#	print S "$_\t$e\t$p\n";
+#    }
+#}
+#close(S);
 
 1;

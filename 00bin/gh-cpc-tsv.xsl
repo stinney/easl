@@ -23,8 +23,8 @@
   <xsl:template match="xh:tr">
     <xsl:param name="t"/>
     <xsl:value-of select="$t"/><xsl:text>&#x9;</xsl:text>
-    <xsl:value-of select="xh:td[1]/xh:img/@src"/><xsl:text>&#x9;</xsl:text>
-    <xsl:value-of select="xh:td[2]/text()"/><xsl:text>&#xa;</xsl:text>
+    <xsl:value-of select="xh:td[2]/text()"/><xsl:text>&#x9;</xsl:text>
+    <xsl:value-of select="xh:td[1]/xh:img/@src"/><xsl:text>&#xa;</xsl:text>
   </xsl:template>
 
   <xsl:template match="*"/>

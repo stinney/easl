@@ -1,0 +1,13 @@
+*.dump
+*~
+.~*
+.[a-z]*
+D
+*.log
+log
+*.out
+*.xz
+*.zip
+01*
+02*
+00etc/pc25/w/*
