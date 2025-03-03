@@ -27,6 +27,9 @@ my %rm = load_map($rm, 1, 0); my %rm_seen = ();
 my $sm = "$sl-names.tsv";
 my %sm = load_map($sm, 0, 0);
 
+my $tm = "$sl-tags.tsv";
+my %tm = load_map($tm, 0, 0);
+
 my $om = "$sl-oids.tsv";
 my %om = load_map($om, 0, 0);
 
@@ -62,9 +65,12 @@ print "<sl n=\"$sl\">";
 foreach (@sl) {
 
     my $ln = $_;
+
     my $o = $om{$ln};
     if ($o) {
 	$o = " oid=\"$o\"";
+    } else {
+	$o = '';
     }
     
     my $r = $rm{$ln};
@@ -75,7 +81,14 @@ foreach (@sl) {
 	$r = '';
     }
 
-    print "<sign n=\"$ln\" xml:id=\"s.$ln\"$o$r>";
+    my $t = $tm{$ln};
+    if ($t) {
+	$t = " tags=\"$t\"";
+    } else {
+	$t = '';	
+    }
+    
+    print "<sign n=\"$ln\" xml:id=\"s.$ln\"$o$t$r>";
     my @subs = keys %{$f{$ln}};
     foreach my $s (sort @subs) {
 	my $ss = ($s eq '-' ? '' : $s);

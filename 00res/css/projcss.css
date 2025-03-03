@@ -3,7 +3,7 @@
 
 .lname { text-align: left; vertical-align: middle; }
 .names { vertical-align: top; }
-.sname { text-align: left; }
+.sname,.stags { text-align: left; }
 .uname { text-align: left; }
 .rglyf { text-align: left; padding-left: .5em; padding-top: .25em; }
 .glyph { text-align: right; }

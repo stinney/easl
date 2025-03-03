@@ -19,8 +19,8 @@
 	    <tr>
 	      <th class="lname" colspan="2">Entry</th>
 	      <th class="names">Names</th>
-	      <th class="glyph">Glyph</th>
-	      <th class="image">Row</th>
+	      <th class="glyph">PC-font</th>
+	      <th class="image">CDLI-gh</th>
 	    </tr>
 	  </thead>
 	  <xsl:choose>
@@ -58,6 +58,9 @@
 	      <div class="names">
 		<div class="sname"><xsl:value-of select="@sn"/></div>
 		<div class="uname"><xsl:value-of select="@u"/></div>
+		<xsl:if test="../@tags">
+		  <div class="stags"><xsl:value-of select="../@tags"/></div>
+		</xsl:if>
 		<xsl:if test="f">
 		  <div class="rglyf"><span class="ofs-pc ofs-200"><xsl:value-of select="@c"/></span></div>
 		</xsl:if>

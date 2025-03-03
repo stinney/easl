@@ -2,7 +2,7 @@ SL=easl
 SLfont=PC-all.ttf
 WWW=/home/oracc/www/${SL}
 
-default: easl frame codes salts names notes images oids rows font html
+default: easl frame codes salts names notes tags images oids rows font html
 
 easl: 00etc/easl.tsv
 
@@ -15,6 +15,8 @@ salts: 00raw/${SL}-salts.log
 names: 00raw/${SL}-names.tsv
 
 notes: 00raw/${SL}-notes.tsv
+
+tags: 00raw/${SL}-tags.tsv
 
 images:
 	00bin/images.sh
@@ -53,6 +55,9 @@ font: /home/oracc/www/fonts/${SLfont}
 
 00raw/easl-rows.tsv: 00etc/${SL}.tsv Makefile
 	cut -f 1,2 $< | sed "s#^\(o[0-9]\+\)#/easl/images/\1.jpg#" | rocox -C21 >$@
+
+00raw/easl-tags.tsv: 00etc/${SL}-tags.tsv Makefile
+	grep -v '^#' 00etc/${SL}-tags.tsv | cut -f1,3 | rocox -C21 | grep -v '	$$' >$@
 
 00raw/easl-notes.tsv: 00etc/oid-notes.tsv 00bin/easl-notes.sh 00etc/easl.tsv
 	00bin/easl-notes.sh
