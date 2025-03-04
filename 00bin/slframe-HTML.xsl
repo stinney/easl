@@ -1,10 +1,12 @@
 <xsl:transform xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0"
 	       xmlns="http://www.w3.org/1999/xhtml">
-  <xsl:param name="mode" select="'full'"/> <!-- or nc for non-contrastive only -->
+
+  <xsl:param name="mode" select="''"/> <!-- NC for non-contrastive only; SQ for sequences only -->
+
   <xsl:template match="/">
     <xsl:variable name="title-sub">
-      <xsl:if test="$mode='nc'">
-	<xsl:text> NC</xsl:text>
+      <xsl:if test="string-length($mode) > 0">
+	<xsl:value-of select="concat(' ', $mode)"/>
       </xsl:if>
     </xsl:variable>
     <html>
@@ -24,11 +26,14 @@
 	    </tr>
 	  </thead>
 	  <xsl:choose>
-	    <xsl:when test="$mode='full'">
+	    <xsl:when test="$mode=''">
 	      <xsl:apply-templates select="sl/sign"/>
 	    </xsl:when>
-	    <xsl:otherwise>
+	    <xsl:when test="$mode='NC'">
 	      <xsl:apply-templates select="sl/sign[s/f]"/>
+	    </xsl:when>
+	    <xsl:otherwise>
+	      <xsl:apply-templates select="sl/sign[@seq]"/>
 	    </xsl:otherwise>
 	  </xsl:choose>
 	</table>
@@ -40,6 +45,21 @@
     <tbody>
       <xsl:for-each select="s">
 	<tr>
+	  <xsl:if test="$mode='SQ'">
+	    <xsl:attribute name="class">
+	      <xsl:choose>
+		<xsl:when test="../@seq='.'">
+		  <xsl:text>sq-seq</xsl:text>
+		</xsl:when>
+		<xsl:when test="../@seq=':'">
+		  <xsl:text>sq-opq</xsl:text>
+		</xsl:when>
+		<xsl:when test="../@seq='!'">
+		  <xsl:text>sq-chr</xsl:text>
+		</xsl:when>
+	      </xsl:choose>
+	    </xsl:attribute>
+	  </xsl:if>
 	  <xsl:if test="count(preceding-sibling::*)=0">
 	    <th class="lname" rowspan="{count(../*)}">
 	      <xsl:value-of select="../@n"/>
@@ -69,7 +89,7 @@
 	    </a>
 	  </td>
 	  <td class="ofs-pc ofs-200">
-	    <div>
+	    <div class="chars">
 	      <xsl:if test="not(f)">
 		<div>
 		  <span class="{@class}">

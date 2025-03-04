@@ -14,3 +14,10 @@
 .fs-275 { font-size: 275%; }
 
 td a { text-decoration: none; }
+
+.sq-seq { color: green; }
+.sq-opq { color: red; }
+.sq-chr { color: orange; }
+
+.chars div+div { padding-top: .25em; }
+ma

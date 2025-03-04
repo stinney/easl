@@ -82,13 +82,17 @@ foreach (@sl) {
     }
 
     my $t = $tm{$ln};
+    my $seq = '';
     if ($t) {
 	$t = " tags=\"$t\"";
+	if ($t =~ /([.:!])/) {
+	    $seq = " seq=\"$1\"";
+	}
     } else {
 	$t = '';	
     }
     
-    print "<sign n=\"$ln\" xml:id=\"s.$ln\"$o$t$r>";
+    print "<sign n=\"$ln\" xml:id=\"s.$ln\"$o$t$seq$r>";
     my @subs = keys %{$f{$ln}};
     foreach my $s (sort @subs) {
 	my $ss = ($s eq '-' ? '' : $s);
