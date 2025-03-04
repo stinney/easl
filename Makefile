@@ -54,7 +54,7 @@ font: /home/oracc/www/fonts/${SLfont}
 	cut -f 1,2 $< | rocox -C21 >$@
 
 00raw/easl-rows.tsv: 00etc/${SL}.tsv Makefile
-	cut -f 1,2 $< | sed "s#^\(o[0-9]\+\)#/easl/images/\1.jpg#" | rocox -C21 >$@
+	cut -f 1,2 $< | sed "s#^\(o[0-9]\+\)#/easl/images/\1.png#" | rocox -C21 >$@
 
 00raw/easl-tags.tsv: 00etc/${SL}-tags.tsv Makefile
 	grep -v '^##' 00etc/${SL}-tags.tsv | cut -f1,3 | rocox -C21 | grep -v '	$$' >$@

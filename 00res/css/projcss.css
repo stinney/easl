@@ -15,12 +15,14 @@
 
 td a { text-decoration: none; }
 
-.sq-seq { color: green; }
-.sq-opq { color: red; }
-.sq-chr { color: orange; }
+.sq-seq { background-color: #edfcee; }
+.sq-opq { background-color: #ffe8e8; }
+.sq-chr { background-color: #fffbe8; }
 
-.seq { background-color: palegreen; }
+.seq { background-color: #edfcee; }
 .not { background-color: #efefef; }
 
 .chars div+div { padding-top: .25em; }
-ma
+
+.preamble { width: 80%; margin: auto; }
+
