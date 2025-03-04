@@ -83,16 +83,20 @@ foreach (@sl) {
 
     my $t = $tm{$ln};
     my $seq = '';
+    my $not = '';
     if ($t) {
 	$t = " tags=\"$t\"";
 	if ($t =~ /([.:!])/) {
 	    $seq = " seq=\"$1\"";
 	}
+	if ($t =~ /[-15di\#]/) {
+	    $not = " not=\"1\"";
+	}
     } else {
 	$t = '';	
     }
     
-    print "<sign n=\"$ln\" xml:id=\"s.$ln\"$o$t$seq$r>";
+    print "<sign n=\"$ln\" xml:id=\"s.$ln\"$o$t$seq$not$r>";
     my @subs = keys %{$f{$ln}};
     foreach my $s (sort @subs) {
 	my $ss = ($s eq '-' ? '' : $s);

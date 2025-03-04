@@ -45,19 +45,37 @@
     <tbody>
       <xsl:for-each select="s">
 	<tr>
-	  <xsl:if test="$mode='SQ'">
+	  <xsl:variable name="sq-class">
+	    <xsl:choose>
+	      <xsl:when test="$mode='SQ'">
+		<xsl:choose>
+		  <xsl:when test="../@seq='.'">
+		    <xsl:text>sq-seq</xsl:text>
+		  </xsl:when>
+		  <xsl:when test="../@seq=':'">
+		    <xsl:text>sq-opq</xsl:text>
+		  </xsl:when>
+		  <xsl:when test="../@seq='!'">
+		    <xsl:text>sq-chr</xsl:text>
+		  </xsl:when>
+		</xsl:choose>
+	      </xsl:when>
+	      <xsl:otherwise>
+		<xsl:if test="../@seq='.' or ../@seq=':'">
+		  <xsl:text>seq</xsl:text>
+		</xsl:if>
+	      </xsl:otherwise>
+	    </xsl:choose>
+	  </xsl:variable>
+	  <xsl:variable name="not-class">
+	    <xsl:if test="../@not='1'">
+	      <xsl:text>not</xsl:text>
+	    </xsl:if>
+	  </xsl:variable>
+	  <xsl:variable name="class" select="concat($sq-class, ' ', $not-class)"/>
+	  <xsl:if test="string-length($class &gt; 1)">
 	    <xsl:attribute name="class">
-	      <xsl:choose>
-		<xsl:when test="../@seq='.'">
-		  <xsl:text>sq-seq</xsl:text>
-		</xsl:when>
-		<xsl:when test="../@seq=':'">
-		  <xsl:text>sq-opq</xsl:text>
-		</xsl:when>
-		<xsl:when test="../@seq='!'">
-		  <xsl:text>sq-chr</xsl:text>
-		</xsl:when>
-	      </xsl:choose>
+	      <xsl:value-of select="$class"/>
 	    </xsl:attribute>
 	  </xsl:if>
 	  <xsl:if test="count(preceding-sibling::*)=0">
@@ -128,5 +146,7 @@
     <xsl:value-of select="$c"/>
     <xsl:text>;</xsl:text>
   </xsl:template>
+
+  <xsl:template match="text()"/>
   
 </xsl:transform>

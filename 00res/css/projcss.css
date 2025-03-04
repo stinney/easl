@@ -19,5 +19,8 @@ td a { text-decoration: none; }
 .sq-opq { color: red; }
 .sq-chr { color: orange; }
 
+.seq { background-color: palegreen; }
+.not { background-color: #efefef; }
+
 .chars div+div { padding-top: .25em; }
 ma
