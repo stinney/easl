@@ -18,6 +18,7 @@ td a { text-decoration: none; }
 .sq-seq { background-color: #edfcee; }
 .sq-opq { background-color: #ffe8e8; }
 .sq-chr { background-color: #fffbe8; }
+.sq-inv { background-color: #e6ebfa; }
 
 .seq { background-color: #edfcee; }
 .not { background-color: #efefef; }

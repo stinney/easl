@@ -54,6 +54,7 @@
 ## . sequence
 ## : opaque sequence
 ## ! sequence but encode
+## @ name uses × but encode as sequence
 ## # broken
 ## + added
 ## - remove (exists but out of scope)
@@ -89,9 +90,11 @@
 	<h2>PC-font</h2>
 
 	<p>The <code>PC-font</code> column gives the characters in a
-	font that covers the AP24 proposal as well as ACN, andalso
+	font that covers the AP24 proposal as well as ACN, and also
 	preserves the characters from AP23 that were removed in
-	AP24.</p>
+	AP24. The font was originally developed by Anshuman Pandey for
+	AP23 and includes the glyphs developed by Robin Leroy for
+	ACN.</p>
 
 	<p>Where CDLI-gh has multiple non-contrastive variants, all of
 	the variants are given in the PC-font column, and they are
@@ -131,12 +134,13 @@
 	    regular sequences have the <span class="sq-seq">same green
 	    background</span> as the main page. Opaque
 	    sequences--those whose sign name hides the possibility
-	    that they may be sequences--should have a <span
-	    class="sq-opq">pink background</span>, but most of these
-	    have not yet been tagged with the <code>:</code> rather
-	    than the neutral <code>.</code>. Sequences that are
-	    candidates for encoding have a <span class="sq-chr">pale
-	    yellow background</span> but these have not yet been
+	    that they may be sequences--have a <span
+	    class="sq-opq">pink background</span>.  Complex signs
+	    (those using <code>×</code>) that might be better encoded
+	    as a sequence have a <span class="sq-inv">pale blue
+	    background</span> Sequences that are candidates for
+	    encoding have a <span class="sq-chr">pale yellow
+	    background</span> but these have not yet been
 	    systematically reviewed.</p>
 	  </xsl:when>
 	</xsl:choose>
@@ -182,6 +186,9 @@
 		  </xsl:when>
 		  <xsl:when test="../@seq='!'">
 		    <xsl:text>sq-chr</xsl:text>
+		  </xsl:when>
+		  <xsl:when test="../@seq='@'">
+		    <xsl:text>sq-inv</xsl:text>
 		  </xsl:when>
 		</xsl:choose>
 	      </xsl:when>
