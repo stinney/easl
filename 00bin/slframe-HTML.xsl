@@ -1,6 +1,7 @@
 <xsl:transform xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0"
+	       xmlns:esp="http://oracc.org/ns/esp/1.0"
+	       xmlns:xh="http://www.w3.org/1999/xhtml"
 	       xmlns="http://www.w3.org/1999/xhtml">
-
   <xsl:param name="mode" select="''"/> <!-- NC for non-contrastive only; SQ for sequences only -->
 
   <xsl:template match="/">
@@ -9,7 +10,22 @@
 	<xsl:value-of select="concat(' ', $mode)"/>
       </xsl:if>
     </xsl:variable>
-    <html>
+    <esp:page>
+	<xsl:choose>
+	  <xsl:when test="$mode=''">
+	    <esp:name>EASL</esp:name>
+	    <esp:title>EASL</esp:title>
+	  </xsl:when>
+	  <xsl:when test="$mode='NC'">
+	    <esp:name>EASL: Non-Contrastive</esp:name>
+	    <esp:title>EASL: Englund Archaic Sign List--Non-Contrastive Signs</esp:title>
+	  </xsl:when>
+	  <xsl:when test="$mode='SQ'">
+	    <esp:name>EASL: Sequences</esp:name>
+	    <esp:title>EASL: Englund Archaic Sign List--Sequences</esp:title>
+	  </xsl:when>
+	</xsl:choose>
+	<html>
       <head>
 	<meta charset="utf-8"/>
 	<title><xsl:value-of select="@n"/><xsl:text>EASL</xsl:text><xsl:value-of select="$title-sub"/></title>
@@ -22,8 +38,8 @@
 	    <h1>EASL: Englund Archaic Sign List--full listing</h1>
 	  
 	<p>This page defines a sign list based on Bob Englund's
-	collection of Proto-Cuneiform signs at <a
-	href="https://cdli-gh.github.io/proto-cuneiform_signs/">https://cdli-gh.github.io/proto-cuneiform_signs/</a>.
+	collection of Proto-Cuneiform signs at <esp:link
+	url="https://cdli-gh.github.io/proto-cuneiform_signs/">https://cdli-gh.github.io/proto-cuneiform_signs/</esp:link>.
 	It is intended to provide a fixed reference point for work on
 	a proposal to encode Proto-Cuneiform in Unicode.  In prior
 	proposals and in PCSL this collection has been referred to as
@@ -113,8 +129,8 @@
 	<p>Two pages of subsets of signs are available:</p>
 
 	<ul>
-	  <li><a href="sltab-nc.html">Non-Contrastive Signs</a></li>
-	  <li><a href="sltab-sq.html">Sequences</a></li>
+	  <li><esp:link url="sltab-nc.html">Non-Contrastive Signs</esp:link></li>
+	  <li><esp:link url="sltab-sq.html">Sequences</esp:link></li>
 	</ul>
 
 	<h2>Full Listing of EASL/CDLI-gh</h2>
@@ -168,6 +184,7 @@
 	</table>
       </body>
     </html>
+  </esp:page>
   </xsl:template>
 
   <xsl:template match="sign">
@@ -236,7 +253,7 @@
 		</xsl:otherwise>
 	      </xsl:choose>
 	    </xsl:variable>
-	    <a name="{$oid}" href="/pcsl/{../@oid}" target="_blank">
+	    <esp:link name="{$oid}" url="/pcsl/{../@oid}" target="_blank">
 	      <div class="names">
 		<div class="sname"><xsl:value-of select="@sn"/></div>
 		<div class="uname"><xsl:value-of select="@u"/></div>
@@ -248,7 +265,7 @@
 		</xsl:if>
 		<div class="notes"><p><xsl:value-of select="n"/></p></div>
 	      </div>
-	    </a>
+	    </esp:link>
 	  </td>
 	  <td class="ofs-pc ofs-200">
 	    <div class="chars">
@@ -271,10 +288,11 @@
 	    <td rowspan="{count(../*)}">
 	      <xsl:choose>
 		<xsl:when test="starts-with(../@row,'/')">
-		  <img class="lrow" src="{../@row}"/>
+		  <esp:image class="lrow" file="easl/{substring-after(../@row,'/easl/images/')}"
+			     description="{../@row}"/>
 		</xsl:when>
 		<xsl:otherwise>
-		  <img class="lrow" width="600px" src="/osl/{../@row}"/>
+		  <esp:image class="lrow" width="600px" file="/osl/{../@row}" description="{../@row}"/>
 		</xsl:otherwise>
 	      </xsl:choose>
 	    </td>

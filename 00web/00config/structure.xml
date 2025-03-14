@@ -11,6 +11,9 @@
   <struct:page file="pepc/approaches.xml" id="pepcapproaches" type="page"/>
   <struct:page file="pepc/principles.xml" id="pepcprinciples" type="page"/>
   <struct:page file="easl/easl.xml" id="easl" type="page">
+    <struct:page file="easl/sltab.xml" id="easltab" type="page"/>
+    <struct:page file="easl/sltab-nc.xml" id="easltabnc" type="page"/>
+    <struct:page file="easl/sltab-sq.xml" id="easltabsq" type="page"/>
     <!--    <struct:page file="pepc/pepc-ncv-editme.xml" id="repncv" type="page" hide-menu-link="yes"/>-->
     <!--    <struct:page file="pepc/rep-num.xml" id="repnum" type="page" hide-menu-link="yes"/>-->
     <!--    <struct:page file="pepc/rep-add.xml" id="repadd" type="page" hide-menu-link="yes"/>-->
