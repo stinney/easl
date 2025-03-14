@@ -1,3 +1,5 @@
+.PRECIOUS: pepc.log
+
 default: pepc.pdf
 
 pepc.pdf: st.tex pepc.tex
