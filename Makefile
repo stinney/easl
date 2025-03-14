@@ -2,10 +2,15 @@ SL=easl
 SLfont=PC-all.ttf
 WWW=/home/oracc/www/pcsl/pepc
 
-default: easl frame codes salts names notes tags images oids rows font html pcpe
+default: easl frame codes salts names notes tags images oids rows font html pcpe pdf
 
 pepc: default
 	oracc build
+
+pdf: p/pcpe.pdf
+
+p/pcpe.pdf:
+	(cd p ; make)
 
 easl: 00etc/easl.tsv
 
