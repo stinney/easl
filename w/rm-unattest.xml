@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<esp:page
+    xmlns:esp="http://oracc.org/ns/esp/1.0"
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:xh="http://www.w3.org/1999/xhtml"
+    xmlns:xi="http://www.w3.org/2001/XInclude"
+    xmlns:sxw="http://oracc.org/ns/sxweb/1.0"
+    >
+  <esp:name>RM: Unattested</esp:name>
+  <esp:title>Unattested</esp:title>
+  <esp:url>rm-unattested</esp:url>
+  <html>
+    <head/>
+    <body>
+      <p>Signs in AP24 which are not attested or are uncertain in CDLI-tc.</p>
+
+      <!-- or "grid" -->
+      <sxw:page-o-signs
+	  children="yes"
+	  format="list"
+	  codepoints="yes"
+	  values="no"
+	  xml="yes"
+	  ><xi:include href="rm-unattest-i.xml" parse="xml"
+	  /></sxw:page-o-signs>
+
+    </body>
+  </html>
+</esp:page>

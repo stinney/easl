@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<esp:page xmlns:esp="http://oracc.org/ns/esp/1.0" xmlns="http://www.w3.org/1999/xhtml" xmlns:xh="http://www.w3.org/1999/xhtml" xmlns:xpd="http://oracc.org/ns/xpd/1.0">
+  <esp:name>Introduction</esp:name>
+  <esp:title>Introduction</esp:title>
+  <html>
+    <head/>
+    <body>
+      <p>Anshuman Pandey's XXX (AP23) was responded to by Steve Tinney
+      in XXX (ST24) and Pandey subsequently provided Tinney with a
+      revised draft of his proposal, AP24. This draft accepted all of
+      the suggestions of ST24 and included a list of 60 questions
+      raised by these revisions.</p>
+
+      <p>AP24 excluded PC numerals because of an agreement that they
+      would be handled in a separate proposal.  Most PC numerals were
+      covered by ACN.  PC25 is focused almost exclusively on ideograms
+      and includes only a few of those numerals omitted from ACN; an
+      appendix on numbers provides a concordance of AP23 and ACN as
+      well as notes on possible additional work required on PC
+      numerals.</p>
+
+      <p>When ST24 was submitted it was already clear that a further
+      step in the evolution of the PC encoding should be to align the
+      proposal with the CDLI text corpus (CDLI-tc); most of the work
+      done on the prposal up to that point had been carried out on the
+      basis of the GitHub collection of signs CDLI-gh.</p>
+
+      <p>Partly in fulfillment of the need to ground the proposal in
+      the corpus, and partly in the interests of answering Anshuman
+      Panday's questions, Steve Tinney carried out further phases of
+      work on the PC proposal in November/December 2024 and February
+      2025.  This analysis prompted several realizations, most importantly
+      the fact that while prior proposals had assumed that it was
+      necessary to treat the entire sign repertoire as contrastive,
+      the corpus and related published sign lists indicate that
+      several hundred of the encoded characters are actually treated
+      in the scholarly literature as non-contrastive.</p>
+      
+      <p>In the interim, Tinney had worked on several aspects of
+      Oracc's support for cuneiform fonts and on several fonts derived
+      from sign lists (especially Oracc-RSP).  This experience led to
+      understanding that one of the primary goals of prior proposals,
+      to create an encoding which would completely support further
+      scholarship on Proto-Cuneiform, could be met partly by the use
+      of Font Features rather than depending only on encoding
+      characters in Unicode.</p>
+    </body>
+  </html>
+</esp:page>

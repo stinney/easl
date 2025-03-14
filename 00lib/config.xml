@@ -1,0 +1,27 @@
+<project n="pcsl/pepc" 
+    xmlns="http://oracc.org/ns/xpd/1.0"
+    xmlns:xpd="http://oracc.org/ns/xpd/1.0">
+  <name>Proto-Cuneiform Sign List for PEPC Encoding</name>
+  <abbrev>PCSL/PEPC</abbrev>
+  <project-type>oracc</project-type>
+  <type>corpus</type>
+  <logo type="text">PCSL/PEPC</logo>
+  <option name="asl-domain" value="pc"/>
+  <option name="asl-auto" value="no"/>
+  <!--<option name="asl-insts" value="yes"/>-->
+  <!--<option name="asl-nokeys" value="yes"/>-->
+  <option name="asl-corpus" value="yes"/>
+  <option name="asl-max-forms" value="100000"/>
+  <option name="asl-script" value="ofs-pc"/>
+  <option name="cuneify-font" value="ofs-pc"/>
+  <option name="asl-stats" value="yes"/>
+  <option name="build-approved-policy" value="atf"/>
+  <option name="build-outlined-policy" value="atf"/>
+  <option name="catalog-build-policy" value="local"/>
+  <option name="cbd-mode" value="mixed"/>
+  <option name="outline-default-select" value="true"/>
+  <option name="outline-default-sort-fields" value="period,genre,provenience"/>
+  <option name="outline-default-sort-labels" value="Time,Genre,Place"/>
+  <option name="pager-item-cuneify" value="yes"/>
+  <option name="pager-item-images" value="yes"/>
+</project>

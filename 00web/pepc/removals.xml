@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<esp:page xmlns:esp="http://oracc.org/ns/esp/1.0" xmlns="http://www.w3.org/1999/xhtml" xmlns:xh="http://www.w3.org/1999/xhtml" xmlns:xpd="http://oracc.org/ns/xpd/1.0">
+  <esp:name>Removals</esp:name>
+  <esp:title>Removals and Renames</esp:title>
+  <html>
+    <head/>
+    <body>
+      <p>The following classes of characters are removed or renamed from AP24 to PC25:</p>
+
+      <dl>
+	
+	<dt><esp:link page="rmnchead">Removed non-contrastive signs/multiple variants</esp:link></dt>
+	<dd></dd>
+
+      	<dt><esp:link page="rmncsing">Renamed non-constrastive signs/no variants</esp:link></dt>
+	<dd></dd>
+
+      	<dt><esp:link page="rmseq">Sequences except cities</esp:link></dt>
+	<dd></dd>
+
+      	<dt><esp:link page="rmopaque">Sequences which are opaque</esp:link></dt>
+	<dd></dd>
+
+      	<dt><esp:link page="rmbroken">Broken signs reserved to PUA</esp:link></dt>
+	<dd></dd>
+
+      	<dt><esp:link page="rmunattest">Other signs not attested in corpus</esp:link></dt>
+	<dd></dd>
+
+      </dl>
+    </body>
+  </html>
+</esp:page>

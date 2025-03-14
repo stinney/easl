@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<esp:page xmlns:esp="http://oracc.org/ns/esp/1.0" xmlns="http://www.w3.org/1999/xhtml" xmlns:xh="http://www.w3.org/1999/xhtml" xmlns:xpd="http://oracc.org/ns/xpd/1.0">
+  <esp:name>AP24-Q&amp;A</esp:name>
+  <esp:title>Anshu's Questions with Answers</esp:title>
+  <html>
+    <head/>
+    <body>
+      <p>This page provides SJT's answers to the AP questions asked in
+      <esp:link url="/pcsl/downloads/ap24-questions.pdf">the
+      2024-10-05 draft PC proposal</esp:link>.  This page is
+      transient; it will be removed when all the issues are
+      resolved.</p>
+
+      <esp:h>Common Points</esp:h>
+
+      <esp:sh>Non-contrastive Variants</esp:sh>
+
+      <p>Questions that involve non-contrastive variants are no longer
+      applicable.</p>
+      
+      <esp:sh>Existing Naming Practice versus PCSL</esp:sh>
+
+      <p>It's sometimes not clear whether it's worth renaming a sign
+      from the CDLI-gh form to a novel PCSL form--we have done that
+      quite a lot, but there is still some value to being selective
+      about when to rename.  In the answers if I feel a call is more
+      or less 50-50 I've recommended sticking to the CDLI-gh
+      practice.</p>
+
+      <esp:sh>CDLI Allographs</esp:sh>
+
+      <p>In retrospect, I think it is a mistake to introduce
+      finer-grained allograph notations than CDLI-tc/CDLI-gh is using.
+      The decisions made in the corpus about whether sign variants are
+      contrastive or not are made not only on the basis of form but
+      also context of various kinds, and we should leave it to the
+      specialists to decide if further division is needed in the
+      future.</p>
+      
+      <esp:sh>Sequences</esp:sh>
+
+      <p>There are several kinds of "sign" which we should treat as
+      sequences rather than encoding them as independent
+      codepoints:</p>
+
+      <dl>
+	<dt>BESIDE compositions</dt>
+	<dd>Signs that are simple juxtapositions should not be assigned codepoints.</dd>
+	<dt>"DAY" compositions</dt>
+	<dd>The sequences composed of UD×N followed by another number, M,
+	should not be assigned codepoints.</dd>
+	<dt>"AGE" compositions</dt>
+	<dd>Combinations of N57 followed by an ideogram should not be
+	assigned codepoints; some of these may still be notated as
+	N(N57)×SIGN, in which case they will be renamed as N(N57).SIGN as PC25 is
+	refined.</dd>
+      </dl>
+
+      <p>Signs that are later decomposed into sequences may merit
+      encoding, however.</p>
+
+      <h1>Answers</h1>
+      
+      <ol>
+	
+	<!--1--><li>The removed signs are either Uruk V (very, very
+	     few) or Early Dynastice I/II (the majority).  Most of the
+	     ED I/II are from Ur.  Now that I have compared CDLI-tc to
+	     the proposal we can be sure that none of these occur in
+	     the Uruk IV/III corpus.</li>
+	
+	<!--2--><li>From the description it sounds like the Unicode
+	     and PCSL orders are closely aligned; let's see how that
+	     looks when we have a "finished" proposal and see how to
+	     tweak the orders if necessary.  I agree that in this case
+	     we might as well align the sort orders as closely as
+	     possible.</li>
+
+	<!--3--><li>There is very little standardization of practice
+	     in scholarly use of the <i>tenu</i> designation; I would
+	     recommend keeping existing naming practices where we can
+	     as a general approach. In the case in point, if I were to
+	     change the names, I would think of AD~a as a tenu form of
+	     AD~b not vice-versa (because tenu means "slanting" and
+	     AD~b is horizontal but AD~a is turned). That would be a
+	     double-renaming, so for practical purposes it would be
+	     easier to accept that the practice of marking with
+	     <code>~</code>-allographs versus labeling as
+	     <code>@t</code> is inconsistent.</li>
+
+	<!--4--><li>We should definitely have @compoundonly entries in
+	     PCSL for these--I have probably already done this because
+	     the Oracc sign list tool (sx) requires all compound
+	     components to be declared either as @sign or
+	     @compoundonly.  As the proposal goes along in the next
+	     few weeks I will keep the @compoundonly updated.</li>
+
+	<!--5--><li>The ZATU signs only rarely have other names and
+	     even in those cases the ZATU name is more widely used; I
+	     will keep an eye open for exceptions as I do final
+	     checking.  The reason the other names don't exist is that
+	     the non-ZATU names are mnemonics based on superficial
+	     similarity to later SAC signs: the ones that just got
+	     labelled ZATUNNN are ones where there is no later
+	     analogue to use as a mnemonic.</li>
+
+	<!--6--><li>AN variants are non-contrastive so the renaming is
+	     a PCSL matter rather than an encoding one. We can
+	     certainly keep all the variants in the font as a CV's if
+	     you like.</li>
+
+	<!--7--><li>Yes, we can rename to |(BU~a%BU~a).NA2~a|.</li>
+
+	<!--8--><li>The <code>~v1</code> goes away, but yes we can
+	     rename to use the 'crossing'/<code>%</code>, i.e.,
+	     |(BU~a%BU~a).NA2~b@n|; the 󲱣 form is nicer as you
+	     say.</li>
+
+	<!--9--><li>This is a place where I introduced finer-grained
+	     allomorphs where CDLI-tc/CDLI-gh treats several variants
+	     as non-contrastive. I now think we should leave things as
+	     CDLI-tc/CDLI-gh has them</li>
+
+	<!--10--><li>We don't need to rename this one because the
+	     various LAM~b are non-contrastive.</li>
+
+	<!--11--><li>The DUG~c variants are non-contrastive, so no
+	     renaming is necessary.</li>
+
+	<!--12--><li>As above.</li>
+
+	<!--13--><li>We shouldn't introduce a new allograph, but we
+	     could say |EN~c&amp;EN~c@180| with Unicode name EN-C OVER
+	     EN-C INVERTED if you prefer.</li>
+
+	<!--14--><li>I'm OK with |EZEN~a×(HI×1(N57)&amp;AN)|; I think
+	     the wrapper groupings on |(HI×1(N57)).(HI×1(N57))| is a
+	     CDLI legacy--it's not needed for PCSL; we should use the
+	     simpler |HI×1(N57).HI×1(N57)|.</li>
+
+	<!--15--><li>EZEN×LA does not occur in the Uruk IV/III corpus,
+	     so we can leave that one</li>
+
+	<!--16--><li>Good catch--this does require a substitution of
+	     the reference glyph. The character |EZEN~b×6(N57)| stays
+	     in the proposal as it is now; the reference glyph in AP24
+	     is the one that should be excluded because it is the ED
+	     I/II Ur form; the one that should be used in the proposal
+	     is the EZEN~b with closed square ends (I collated the
+	     photo to confirm this is the case).</li>
+
+	<!--17--><li>Out of scope/non-contrastive.</li>
+
+	<!--18--><li>These are non-contrastive forms of a sequence so
+	     they can be handled with font features.</li>
+
+	<!--19--><li>I don't think we should rename the GAN~b sequence
+	     to align with the DUG sequence; the labels don't
+	     currently have consistent structural implications and
+	     things are already complex enough, so I would avoid
+	     adding another layer of complexity.</li>
+
+	<!--20--><li>No rename needed because non-contrastive.</li>
+
+	<!--21--><li>No rename needed because non-contrastive.</li>
+
+	<!--22--><li>The differences are in both components so I think
+	     it is simplest to treat the combinations as variants and
+	     keep |(GIŠ×(DIN.DIN))~[abc]| per CDLI-tc/CDLI-gh.</li>
+
+	<!--23--><li>Keep to CDLI-gh here.</li>
+
+	<!--24--><li>CDLI-gh does have |LAGAB~axKUSZU2~b| for this so I
+	     suggest we use that rather than create a new
+	     allograph.</li>
+
+	<!--25--><li>In TUR₃~a 𒯘 and TUR₃~b 𒯚 the differentiation is
+	     the end of NUN which is forked and has a final vertical
+	     in TUR₃~a and plain in TUR₃~b.  We should leave
+	     |LAGAB~a×NUN~b| as is because it has a plain ending.</li>
+
+	<!--26--><li>LAM is quite a variable sign but we should retain
+	     the CDLI-gh level of differentiation.</li>
+
+	<!--27--><li>No rename because LAM~b variants are non-contrastive.</li>
+
+	<!--28--><li>It's interesting that CDLI-gh has GESZTU~c3 and
+	     GESZTU~c5 but not the intervening ones. But let's leave
+	     these things as they are in case the origins of the
+	     current situation are probably based in contextual
+	     criteria of contrastive/non-contrastive</li>
+
+	<!--29--><li>Yes, this should be MAR@g!</li>
+
+	<!--30--><li>Sequence</li>
+
+	<!--31--><li>Sequence</li>
+
+	<!--32--><li>We should leave this as it is because it aligns
+	     with the ACN-encoded |NINDA₂×(ŠE.2(N01))| and the form of
+	     2(N01) is the one that is standard in this compound.</li>
+
+	<!--33--><li>Yes, the PCSL names and the Unicode names should
+	     only have the non-GUDU₄ versions because GUDU₄ is a
+	     semantic interpretation and we should be avoiding those
+	     where possible.  I will keep them in PCSL with the @aka
+	     tag; I would leave it up to you whether there there is an
+	     annotation in the Unicode names list.</li>
+
+	<!--34--><li>The actual manuscript instances are going to vary
+	     in size and location of components so it is fine to use a
+	     normalized/standardized sizing and positioning that looks
+	     good.</li>
+
+	<!--35--><li>Because 'tenu' is really 'slanted', but is used
+	     liberally, I would not consider 𒨕 as NAB@t. I definitely
+	     recognize that @t is sometimes used in this way but let's
+	     leave the name aligned with CDLI-tc/CDLI-gh.</li>
+
+	<!--36--><li>This can stay as is because all of the SAG forms
+	     are now non-contrastive.</li>
+
+	<!--37--><li>As in 36 this can stay as is.</li>
+
+	<!--38--><li>SAG and SAG@n no longer have subvariants.</li>
+
+	<!--39--><li>Sequence and non-contrastive LAM~b.</li>
+
+	<!--40--><li>CDLI-gh does not consider SILA₃ with circular end
+	     versus half-circle end as contrastive; they are all
+	     SILA₃~a.</li>
+
+	<!--41--><li>Yes, good catch, this should be
+	     |GARA₂~a×SILA₃~a|.</li>
+
+	<!--42--><li>I think we can leave ZATU646 as is, the
+	     difference is so slight.</li>
+
+	<!--43--><li>CDLI-gh has |SILA3~dxNI~a| so let's rename to |SILA₃~d×NI~a|.</li>
+
+	<!--44--><li>We should leave SUKUD@g~b as in CDLI-gh</li>
+
+	<!--45--><li>Fair question; like @t, @g is used sometimes
+	     almost as a metaphor to indicate "this sign has extra
+	     bits". Leave as CDLI-gh.</li>
+
+	<!--46--><li>These SUM~a are now non-contrastive variants.</li>
+
+	<!--47--><li>Another good question: ŠAB is later |PA.IB|, as
+	     is ŠAB~a here; ŠAB~b here is |PAP.IB|.  We should encode
+	     ŠAB~a and ŠAB~b and treat the variants as
+	     non-contrastive.</li>
+
+	<!--48--><li>The various sub-forms of ŠE in compounds are
+	     treated as non-contrastive in CDLI as far as I can
+	     tell.</li>
+
+	<!--49--><li>This is a sequence and the components are
+	     non-contrastive.</li>
+
+	<!--50--><li>I think you are right about ŠEN~c and ŠEN~c@t but
+	     we should leave it as CDLI-gh in case there is some
+	     subtle contextual background to this inconsistency.</li>
+
+	<!--51--><li>Fair question but let's stick with CDLI.</li>
+
+	<!--52--><li>CDLI treats all TUR as non-contrastive so TUR@g is OK.</li>
+
+	<!--53--><li>The specific N08 stacking patterns can be handled
+	     in the font with ligatures; the U₄.N need to be treated
+	     as sequences rather than characters as well.</li>
+
+	<!--54--><li>As 53.</li>
+
+	<!--55--><li>We do need to encode all of these U₄×N(N57) but
+	     we don't need to identify N(N57) variants.  In the
+	     question U₄×10(N57) has the wrong glyph, but it's OK in
+	     the font I think.  The stacking pattern for the 8/10 N57
+	     is incorrect in CDLI-gh and needs to be fixed in the
+	     reference which I will do.</li>
+
+	<!--56--><li>No variant notation is needed for the 5(N01).</li>
+
+	<!--57--><li>We can leave this as with CDLI--I think Englund
+	     was taking the small KALAM inside URU as an
+	     approximated/reduced form of KALAM~a because it has a box
+	     at the left and a pole-with-streamers (or the like)
+	     following, so the general form is analogous to
+	     KALAM~a.</li>
+
+	<!--58--><li>I don't follow this one; the only sign in the
+	     corpus is |UŠ~b×TAR~c| so that's the only entry the
+	     encoding needs.</li>
+
+	<!--59--><li>This is an interesting case. |1(N57).ŠUBUR| is a
+	     sequence, and this |1(N57).ŠUBUR|~v1 is considered a
+	     non-contrastive variant by Englund.  I think we should
+	     not encode anything for this, and handle it in the font
+	     by defining ŠUBUR.cv01 as the round variant of ŠUBUR and
+	     1(N57)_ŠUBUR.cv01.liga as the glyph currently called
+	     |1(N57).ŠUBUR|~v1.</li>
+
+	<!--60--><li>Yes, another good observation.  I agree that
+	     |1(N57)×SIG| should be renamed as |1(N57).SIG| and
+	     treated as a sequence.</li>
+
+	<!--61--><li>These are non-contrastive variants so we should
+	     just encode 6(N57) with a glyph variant in the font
+	     6(N57).cv01 and then get the necessary stacking effects
+	     via ligatures.</li>
+
+	<!--62--><li>I'm pretty sure the very long 8(N57) doesn't
+	     exist; only the two column version.</li>
+
+	<!--63--><li>Yes, the ignore vs keep is ok; we may revisit
+	     later but for PC25 it's good.</li>
+
+	<!--64--><li>I don't find |1(N57).1(N57)| in the Uruk IV/III
+	     corpus so removal is appropriate.</li>
+
+      </ol>
+  
+    </body>
+  </html>
+</esp:page>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<esp:page
+    xmlns:esp="http://oracc.org/ns/esp/1.0"
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:xh="http://www.w3.org/1999/xhtml"
+    xmlns:xi="http://www.w3.org/2001/XInclude"
+    xmlns:sxw="http://oracc.org/ns/sxweb/1.0"
+    >
+  <esp:name>RM Broken</esp:name>
+  <esp:title>Remove Broken</esp:title>
+  <esp:url>rm-broken</esp:url>
+  <html>
+    <head/>
+    <body>
+      <p>Signs in AP24 which are broken and should be reserved to the PUA rather than being encoded.</p>
+
+      <!-- or "grid" -->
+      <sxw:page-o-signs
+	  format="list"
+	  codepoints="yes"
+	  values="no"
+	  ><xi:include href="rm-broken.txt" parse="text"
+	  /></sxw:page-o-signs>
+
+    </body>
+  </html>
+</esp:page>

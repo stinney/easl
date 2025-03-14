@@ -1,0 +1,28 @@
+pc25
+	introduction
+	corpus
+	signlists
+	analysis
+	approaches
+	principles
+	repertoire
+		simple
+			ideograms
+			ideograms with nc variants
+			numbers
+			adds
+		specials
+			settlement names
+	removals and renamings
+		non-contrastive variants
+		renamed non-contrastive variants
+		sequences
+		opaque sequences
+		broken signs
+		unattested or uncertain signs
+	Appendices
+		numbers
+			ACN
+			TODO
+		ap24qa
+		font

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<esp:page xmlns:esp="http://oracc.org/ns/esp/1.0" xmlns="http://www.w3.org/1999/xhtml" xmlns:xh="http://www.w3.org/1999/xhtml" xmlns:xpd="http://oracc.org/ns/xpd/1.0">
+  <esp:name>Analysis</esp:name>
+  <esp:title>Analysis</esp:title>
+  <html>
+    <head/>
+    <body>
+      <p>This page provides data on the relationship between CDLI and
+      AP24. It provides the basis for developing AP24 into a proposal
+      that is thoroughly grounded in existing PC corpus-building
+      practice, i.e., PC25.</p>
+
+      <esp:h>AP24 Characters Not Used in CDLI-tc</esp:h>
+
+      <esp:sh>Non-contrastive Variants</esp:sh>
+      
+      <p>The largest group characters proposed in AP24 which are not
+      used in CDLI-tc are the 340 variants which are unmarked in
+      CDLI-gh and which are marked in PCSL with the notation
+      <code>~v[0-9]</code>.</p>
+
+      <p>The reason these characters are not used in CDLI-tc is that
+      they are not considered to be contrastive variants by Englund
+      and his collaborators.  Because they are considered
+      non-contrastive in contemporary scholarship, they are not
+      proposed for encoding in PC25.  Other mechanisms for handling
+      these variants are proposed in APPROACHES.</p>
+
+      <p>The set of characters affected by this change is given
+      <esp:link page="pc25ncyev">on this page</esp:link>.</p>
+
+      <esp:sh>Other Unattested Characters</esp:sh>
+
+      <p>A smaller group of 31 AP24 characters are not attested in
+      CDLI-tc for various reasons; see <esp:link page="pc25ncnov">the annotated
+      list here</esp:link>.</p>
+
+      <esp:h>CDLI-tc Characters not in AP24</esp:h>
+
+      <p>A total of 147 signs in CDLI-tc are not included in AP24; not
+      all of these, however, should be encoded. In the <esp:link
+      page="pc25apadd">annotated list of these signs</esp:link>, the
+      abbreviation <code>DNE</code> stands for "Do Not Encode".  The
+      annotation <code>sequence</code> also implies that the sign
+      should not be encoded as discussed in the repertoire pages.  The
+      majority of the signs not in AP24, however, were already known
+      to be candidates for inclusion in a later version of the
+      proposal and derive from CUSAS1, CUSAS21, and CUSAS31.</p>
+
+      <p>One noteworthy situation is that the sign ŠU₂, which has
+      curved ("Uruk IV") and cuneiform ("Uruk III") non-contrastive
+      variants in the published sign lists and in CDLI-tc, is entered
+      in CDLI-gh as ŠU₂<sub>a</sub> and ŠU₂<sub>b</sub>.  PC25 aligns
+      with the published lists and CDLI-tc and recommends encoding
+      only one ŠU₂ rather than encoding the non-contrastive variants
+      separately.</p>
+      
+    </body>
+  </html>
+</esp:page>

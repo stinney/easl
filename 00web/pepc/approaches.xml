@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<esp:page xmlns:esp="http://oracc.org/ns/esp/1.0" xmlns="http://www.w3.org/1999/xhtml" xmlns:xh="http://www.w3.org/1999/xhtml" xmlns:xpd="http://oracc.org/ns/xpd/1.0">
+  <esp:name>Approaches</esp:name>
+  <esp:title>Approaches</esp:title>
+  <html>
+    <head/>
+    <body>
+      <p>This page describes in an informal manner the various
+      approaches that PC25 proposes to handle the PC repertoire
+      represented by AP24/CDLI-gh/CDLI-tc--referred to below with the
+      shorthand <code>AP24+</code>.</p>
+
+      <p>Further discussion of most of these approaches may be found
+      on <esp:link
+      url="https://build-oracc.museum.upenn.edu/osl/OraccCuneiformFonts/index.html">OSL
+      Unicode Cuneiform Fonts</esp:link> pages.</p>
+
+      <esp:sh>Encoding as Unicode Characters</esp:sh>
+
+      <p>The majority of AP24+ characters should be assigned codepoints.</p>
+
+      <esp:sh>Font-based Support</esp:sh>
+
+      <p>OpenType font features should be used to support
+      non-contrastive variants and certain combinations of characters</p>
+
+      <p>Individual variants can be included in a font as character
+      variants (CVNN).</p>
+      
+      <p>In addition, a stylistic set (e.g., SS04) can
+      be defined to select Uruk IV variants of signs with
+      non-contrastive variants.</p>
+
+      <p>Ligatures (default ligatures, <code>liga</code>) can be used
+      to ensure that character sequences are displayed in a manner
+      that is representative of their occurrence on manuscripts.</p>
+
+      <esp:sh>IVS Support</esp:sh>
+
+      <p>A common use case which involves both Uruk IV and Uruk III
+      versions of signs is a table showing the development of
+      cuneiform script.  In such a case, where the distinction between
+      an Uruk IV and and Uruk III form is effected only via font
+      features, there is the possibility for loss of essential
+      information if such a table is cut and pasted from one context
+      to another.</p>
+
+      <p>In order to avoid this, a set of IVS definitions can be
+      provided which guarantees that an ideogram will retain the
+      appropriate glyph-variant across operations such as cutting and
+      pasting.</p>
+
+      <esp:sh>PUA Support</esp:sh>
+
+      <p>In AP23, ST24, and AP24 it is recommended that damaged
+      container signs, e.g., <code>DUG×X</code> should be
+      encoded. This recommendation is not ideal for three
+      reasons:</p>
+
+      <ol>
+	<li>Most importantly, X-signs have two distinct semantics: one
+	class of X-signs means "there is a visible sign here but I
+	don't know what it is, so I am putting 'X' to indicate that";
+	another class means "there is a broken sign here so I am
+	putting X because it is not clear what is there"</li>
+	<li>In the published lists each of these incomplete signs is
+	tied to one or more instances. Later decipherment may result in
+	the identification of <code>DUG×X</code> as a different
+	encoded sign, in which case the encoding of the instance would
+	be duplicative</li>
+	<li>Since a given X-sign may relate to different instances and
+	these different instances may actually be partially preserved
+	examples of different signs, a single X-sign may represent
+	multiple possible underlying signs leading to possible false
+	associations in the data</li>
+      </ol>
+
+      <p>Encoding X-signs is appropriate in the first class, where
+      <code>X</code> represents a clear but unidentified sign.</p>
+
+      <p>For the class of X-signs where X represents breakage, it is
+      preferable to define characters in the PUA to support this
+      usage; this allows the flexibility of adding multiple variants
+      of X-signs for use in instances that have distinct context and
+      avoids having to encode additional X-signs every time a new
+      <code>CONTAINER×X</code> combination is encountered.</p>
+      
+      <esp:sh>Sign List/Data Stream Support</esp:sh>
+
+      <p>Signs which are sequences of other signs often exhibit more
+      than one ordering or selection of components, for example
+      <code>|GA~a.ZATU753|</code> also occurs as
+      <code>|ZATU573.GA~a|</code>.  In PCSL, this can be handled by
+      treating both orders as forms of the same underlying sign:</p>
+
+      <pre>@sign |GA.ZATU753|
+@oid o0900606
+@form |GA~a.ZATU753|
+@oid o0900607
+@@
+@form |ZATU753.GA~a|
+@oid o0900608
+@@
+@end sign
+      </pre>
+
+      <p>When the Oracc data is compiled this relationship is
+      preserved in the markup in the form of a key consisting of
+      <code>SIGN.FORM.VALUE</code>.  An instance of
+      <code>|GA~a.ZATU753|</code> has the key
+      <code>`o0900606.o0900607.'</code> and an instance of
+      <code>|ZATU753.GA~a|</code> has the key
+      <code>`o0900606.o0900608.'</code>.  (In PC the 'value' component
+      is not used; in Psux it would be the transliterated reading of
+      the sign, e.g., <code>a(LAK797)</code> =
+      <code>o0000087.o0270203.a</code>).</p>
+
+      <p>Both the individual sign forms and the fact that the forms
+      are the "same sign" are preserved in this notation which can
+      then be the basis for further processing either retaining or
+      ignoring the differentiation as desired.</p>
+    </body>
+  </html>
+</esp:page>

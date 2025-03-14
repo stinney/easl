@@ -171,7 +171,7 @@
   </xsl:template>
 
   <xsl:template match="sign">
-    <tbody>
+    <tbody id="{@oid}">
       <xsl:for-each select="s">
 	<tr>
 	  <xsl:variable name="sq-class">
@@ -224,7 +224,19 @@
 	    </xsl:otherwise>
 	  </xsl:choose>
 	  <td>
-	    <a href="/pcsl/{../@oid}" target="_blank">
+	    <xsl:variable name="oid">
+	      <xsl:choose>
+		<xsl:when test="../preceding-sibling::sign[5]">
+		  <!--<xsl:message>prec ../oid=<xsl:value-of select="../@oid"
+		  />; ../oid[-1]=<xsl:value-of select="../following-sibling::sign[5]/@oid"/></xsl:message>-->
+		  <xsl:value-of select="../following-sibling::sign[2]/@oid"/>
+		</xsl:when>
+		<xsl:otherwise>
+		  <xsl:value-of select="../@oid"/>
+		</xsl:otherwise>
+	      </xsl:choose>
+	    </xsl:variable>
+	    <a name="{$oid}" href="/pcsl/{../@oid}" target="_blank">
 	      <div class="names">
 		<div class="sname"><xsl:value-of select="@sn"/></div>
 		<div class="uname"><xsl:value-of select="@u"/></div>

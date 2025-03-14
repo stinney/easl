@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<esp:page xmlns:esp="http://oracc.org/ns/esp/1.0" xmlns="http://www.w3.org/1999/xhtml" xmlns:xh="http://www.w3.org/1999/xhtml" xmlns:xpd="http://oracc.org/ns/xpd/1.0">
+  <esp:name>Corpus</esp:name>
+  <esp:title>Corpus</esp:title>
+  <html>
+    <head/>
+    <body>
+      <p>The PC text Corpus is defined by the CDLI corpus of
+      Proto-Cuneiform texts of Uruk IV and Uruk III data, as adapted
+      for use by PCSL: we call this <code>CDLI-tc</code>; note that
+      CDLI-tc is used here only in the PCSL version of the
+      corpus. This version has some minor modifications to the
+      transliteration and has been converted to use Unicode
+      transliteration conventions rather than the CDLI ASCII ones.</p>
+
+      <p>There are 5976 texts in the corpus of which 1752 are
+      attributed to Uruk IV and 4224, or roughly 75% of the corpus, to
+      the subsequent Uruk III period.</p>
+
+      <esp:sh>The Digital Corpus</esp:sh>
+      <p>The digital corpus includes the contents of the following major publications:</p>
+      <ul>
+	<li>Uruk lexical tablets from ATU3 (Uruk IV and Uruk III)</li>
+	<li>Uruk administrative tablets from ATU5, ATU6, ATU7 (Uruk IV and Uruk III);
+	these supercede ATU1</li>
+	<li>Jemdet Nasr (Uruk III) tablets from MSVO1; these supercede
+	Langdon, PI</li>
+	<li>Tablets from various locations from MSVO4; this includes
+	non-Uruk tablets which were included in ATU1</li>
+	<li>Tablets in private collections from various locations in
+	CUSAS1, CUSAS21, and CUSAS31; these post-date the ATU and MSVO
+	volumes</li>
+	<li>Tablets from the "Erlenmeyer Collection"; these were to be
+	published in MSVO3 which has not yet appeared; many of them
+	have been edited by Englund and others in various
+	publications, however</li>
+	<!--<li>Tablets in private collections primarily from Umma; these
+	are in the CDLI set of transliterations but have not yet been
+	edited in print</li>-->
+      </ul>
+
+      <esp:sh>The Composition of the Corpus</esp:sh>
+
+      <p>PCSL's version of CDLI-tc has the following composition
+      divided by provenience, period, and published/unpublished
+      status:</p>
+
+      <table class="pretty" width="70%">
+	<tr>
+	  <td/>
+	  <td>IV/pub</td>
+	  <td>IV/unp</td>
+	  <td>IV/all</td>
+	  <td>III/pub</td>
+	  <td>III/unp</td>
+	  <td>III/all</td>
+	</tr>
+	<tr>
+	  <td>Uruk</td>
+	  <td>1205</td>
+	  <td>548</td>
+	  <td>1753 </td>
+	  <td>1895</td>
+	  <td>935</td>
+	  <td>2830</td>
+	</tr>
+	<tr>
+	  <td>JN</td>
+	  <td>0</td>
+	  <td>0</td>
+	  <td>0 </td>
+	  <td>237</td>
+	  <td>0</td>
+	  <td>237</td>
+	</tr>
+	<tr>
+	  <td>Umma</td>
+	  <td>0</td>
+	  <td>0</td>
+	  <td>0 </td>
+	  <td>112</td>
+	  <td>295</td>
+	  <td>407</td>
+	</tr>
+	<tr>
+	  <td>Uqair</td>
+	  <td>0</td>
+	  <td>0</td>
+	  <td>0 </td>
+	  <td>42</td>
+	  <td>0</td>
+	  <td>42</td>
+	</tr>
+	<tr>
+	  <td>Misc</td>
+	  <td>33</td>
+	  <td>16</td>
+	  <td>49 </td>
+	  <td>609</td>
+	  <td>49</td>
+	  <td>658</td>
+	</tr>
+	<tr>
+	  <td>total</td>
+	  <td>1238</td>
+	  <td>564</td>
+	  <td>1802 </td>
+	  <td>2895 </td>
+	  <td>1279</td>
+	  <td>4174</td>
+	</tr>
+      </table>
+
+      <esp:sh>Grapheme Distribution</esp:sh>
+
+      <p>A general impression of the amount of graphemic data in the
+      various subcorpora is given in the table below.  In each case,
+      the numbers are the count of distinct signs and the total number
+      of instances of signs, with numerical signs and ideograms being
+      given in separate rows.</p>
+
+      <table class="pretty" width="70%">
+	<tr>
+	  <td/>
+	  <td>IV/pub</td>
+	  <td>IV/unp</td>
+	  <td>IV/all</td>
+	  <td>III/pub</td>
+	  <td>III/unp</td>
+	  <td>III/all</td>
+	</tr>
+	<tr>
+	  <td>Uruk/num</td>
+	  <td>140/4568</td>
+	  <td>120/2245</td>
+	  <td>176/6813 </td>
+	  <td>180/10995</td>
+	  <td>117/3595</td>
+	  <td>197/14590</td>
+	</tr>
+	<tr>
+	  <td>Uruk/idg</td>
+	  <td>775/5734</td>
+	  <td>479/2336</td>
+	  <td>918/8070 </td>
+	  <td>978/17754</td>
+	  <td>609/8036</td>
+	  <td>1083/25790</td>
+	</tr>
+	<tr>
+	  <td>JN/num</td>
+	  <td>0/0</td>
+	  <td>0/0</td>
+	  <td>0/0 </td>
+	  <td>138/2530</td>
+	  <td>0/0</td>
+	  <td>138/2530</td>
+	</tr>
+	<tr>
+	  <td>JN/idg</td>
+	  <td>0/0</td>
+	  <td>0/0</td>
+	  <td>0/0 </td>
+	  <td>399/3790</td>
+	  <td>0/0</td>
+	  <td>399/3790</td>
+	</tr>
+	<tr>
+	  <td>Umma/num</td>
+	  <td>0/0</td>
+	  <td>0/0</td>
+	  <td>0/0 </td>
+	  <td>120/1962</td>
+	  <td>137/3550</td>
+	  <td>165/5512</td>
+	</tr>
+	<tr>
+	  <td>Umma/idg</td>
+	  <td>0/0</td>
+	  <td>0/0</td>
+	  <td>0/0 </td>
+	  <td>396/2559</td>
+	  <td>499/6796</td>
+	  <td>636/9355</td>
+	</tr>
+	<tr>
+	  <td>Uqair/num</td>
+	  <td>0/0</td>
+	  <td>0/0</td>
+	  <td>0/0 </td>
+	  <td>50/444</td>
+	  <td>0/0</td>
+	  <td>50/444</td>
+	</tr>
+	<tr>
+	  <td>Uqair/idg</td>
+	  <td>0/0</td>
+	  <td>0/0</td>
+	  <td>0/0 </td>
+	  <td>226/903</td>
+	  <td>0/0</td>
+	  <td>226/903</td>
+	</tr>
+	<tr>
+	  <td>Misc/num</td>
+	  <td>31/70</td>
+	  <td>30/160</td>
+	  <td>46/230 </td>
+	  <td>166/5545</td>
+	  <td>55/667</td>
+	  <td>166/6212</td>
+	</tr>
+	<tr>
+	  <td>Misc/idg</td>
+	  <td>44/70</td>
+	  <td>96/212</td>
+	  <td>115/282 </td>
+	  <td>672/8197</td>
+	  <td>272/1135</td>
+	  <td>739/9332</td>
+	</tr>
+	<tr>
+	  <td>total</td>
+	  <td>143/4638</td>
+	  <td>125/2405</td>
+	  <td>182/7043 </td>
+	  <td>234/21476 </td>
+	  <td>167/7812</td>
+	  <td>252/29288</td>
+	</tr>
+	<tr>
+	  <td>total</td>
+	  <td>780/5804</td>
+	  <td>515/2548</td>
+	  <td>948/8352 </td>
+	  <td>1292/33203 </td>
+	  <td>833/15967</td>
+	  <td>1485/49170</td>
+	</tr>
+      </table>
+
+      <esp:sh>Grapheme Counts by Subcorpus</esp:sh>
+
+      <p>Simple counts of the entire graphemic repertoire of the Uruk
+      IV/III corpus are <esp:link page="csltab">provided in this
+      table</esp:link>.</p>
+      
+    </body>
+  </html>
+</esp:page>

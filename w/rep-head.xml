@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<esp:page
+    xmlns:esp="http://oracc.org/ns/esp/1.0"
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:xh="http://www.w3.org/1999/xhtml"
+    xmlns:xi="http://www.w3.org/2001/XInclude"
+    xmlns:sxw="http://oracc.org/ns/sxweb/1.0"
+    >
+  <esp:name>PC25 Repertoire</esp:name>
+  <esp:title>PC25 Repertoire</esp:title>
+  <esp:url>rep-pc25</esp:url>
+  <html>
+    <head/>
+    <body>
+      <p>This is the proposed repertoire for PC25 and it is close to
+      final.  Some review is still required, however, so there will
+      still be a few changes or additions.</p>
+      <p>In the first column, the first hex value is the proposed
+      Unicode value for the sign; the hex value in brackets is the
+      Unicode value from AP24.</p>
+      <p>In the two columns of cuneiform, the left column is the PC25
+      codepoint in the PC25 font; the right column is the AP24
+      codepoint in the old PC-all font.  This is a temporary proofing
+      step; they are supposed to look the same ...</p>
+      <p>Clicking on the PCSL name takes you to the PCSL page for the sign.</p>
+      <p>A preliminary TrueType font for PC25 is <esp:link
+      url="/pcsl/pc25/downloads/">available on the PC25 Downloads
+      page</esp:link>.</p>
+      <p>A data file which should allow comparison of PC25 and AP24 is
+      also <esp:link url="/pcsl/pc25/downloads/">available on the PC25
+      Downloads page.</esp:link>.</p>
+      <table class="reptab">
+

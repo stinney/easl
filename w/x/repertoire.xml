@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<esp:page xmlns:esp="http://oracc.org/ns/esp/1.0" xmlns="http://www.w3.org/1999/xhtml" xmlns:xh="http://www.w3.org/1999/xhtml" xmlns:xpd="http://oracc.org/ns/xpd/1.0">
+  <esp:name>Repertoire</esp:name>
+  <esp:title>Repertoire</esp:title>
+  <html>
+    <head/>
+    <body>
+
+      <p>The complete unified list of the PC25 repertoire is <esp:link
+      page="reppc25">available here</esp:link>.</p>
+
+      <p>Signs which are by design not included in PC25 <esp:link
+      page="repnot">are listed here</esp:link>.</p>
+
+      <p>Signs which occur in the Uruk IV/III corpus but which are
+      apparently missing from PC25 are <esp:link page="repmiss">are
+      listed here</esp:link>.</p>
+      
+      <esp:h>Notes on individual classes of inclusions</esp:h>
+      
+      <esp:sh>Signs with non-contrastive variants</esp:sh>
+
+      <p>The 190 signs which have non-contrastive variants, with the
+      proposed reference glyph in initial position in the list, is
+      <esp:link page="repncv">given here</esp:link>.</p>
+
+      <esp:sh>Numbers</esp:sh>
+
+      <p>Although PC25 is primarily focussed on ideograms, <esp:link
+      page="repnum">some numbers, listed here</esp:link>, need to be
+      encoded to support N(N57) sequences.  This is a class of
+      additions to AP24, which omitted all numbers.</p>
+
+      <esp:sh>City Names</esp:sh>
+
+      <p>A list of the signs which represent city names and are
+      assigned codepoints rather than being treated as sequences is
+      <esp:link page="repcity">given here</esp:link>.</p>
+      
+    </body>
+  </html>
+</esp:page>

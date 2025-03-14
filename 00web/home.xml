@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<esp:page xmlns:esp="http://oracc.org/ns/esp/1.0" xmlns="http://www.w3.org/1999/xhtml" xmlns:xh="http://www.w3.org/1999/xhtml" xmlns:xpd="http://oracc.org/ns/xpd/1.0">
+  <esp:name>Home</esp:name>
+  <esp:title>Principles for Encoding Proto-Cuneiform</esp:title>
+  <html>
+    <head/>
+    <body>
+      <p>This project is based on a subset of the CDLI corpus of
+      Proto-Cuneiform texts from the Uruk IV and III periods and was
+      created to support the development of a new iteration of the
+      proposal to encode Proto-Cuneiform in Unicode.</p>
+
+      <p>The corpus is restricted mainly to the published portion of
+      the corpus--see <esp:link page="corpus">for more about the
+      selection process.</esp:link>.</p>
+
+      <p>The <esp:link page="reppc25">repertoire is available
+      here</esp:link> and can be considered near-final.  There are
+      several pages about how decisions were made on what should and
+      should not be encoded.</p>
+
+      <p>There is a <esp:link url="/pcsl/pc25/pager">text
+      corpus</esp:link>; the signlist has not yet been enable for the
+      corpus, but that is planned for the near future.</p>
+    </body>
+  </html>
+</esp:page>

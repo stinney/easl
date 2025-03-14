@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<esp:page
+    xmlns:esp="http://oracc.org/ns/esp/1.0"
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:xh="http://www.w3.org/1999/xhtml"
+    xmlns:xi="http://www.w3.org/2001/XInclude"
+    xmlns:sxw="http://oracc.org/ns/sxweb/1.0"
+    >
+  <esp:name>TC missing Ideograms</esp:name>
+  <esp:title>TC missing Ideograms</esp:title>
+  <esp:url>pc25-tc-idg</esp:url>
+  <html>
+    <head/>
+    <body>
+      <p>Ideograms in CDLI-tc which are not in AP24.</p>
+
+      <!-- or "grid" -->
+      <sxw:page-o-signs
+	  children="yes"
+	  format="list"
+	  codepoints="yes"
+	  values="no"
+	  xml="yes"
+	  ><xi:include href="pc25-tc-idg-i.xml" parse="xml"
+	  /></sxw:page-o-signs>
+
+    </body>
+  </html>
+</esp:page>

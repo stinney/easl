@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<esp:page
+    xmlns:esp="http://oracc.org/ns/esp/1.0"
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:xh="http://www.w3.org/1999/xhtml"
+    xmlns:xi="http://www.w3.org/2001/XInclude"
+    xmlns:sxw="http://oracc.org/ns/sxweb/1.0"
+    >
+  <esp:name>NC no ~v</esp:name>
+  <esp:title>Not in Corpus and not ~v</esp:title>
+  <esp:url>nc-no-v</esp:url>
+  <html>
+    <head/>
+    <body>
+      <p>Signs in AP24 which are not in CDLI-tc and which do not have
+      <code>~v</code> names.</p>
+
+      <!-- or "grid" -->
+      <sxw:page-o-signs
+	  children="yes"
+	  format="list"
+	  codepoints="yes"
+	  values="no"
+	  xml="yes"
+	  ><xi:include href="pc25-nc-v-i.xml" parse="xml"
+	  /></sxw:page-o-signs>
+
+    </body>
+  </html>
+</esp:page>

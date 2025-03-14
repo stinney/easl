@@ -2,7 +2,10 @@ SL=easl
 SLfont=PC-all.ttf
 WWW=/home/oracc/www/${SL}
 
-default: easl frame codes salts names notes tags images oids rows font html
+default: easl frame codes salts names notes tags images oids rows font html pcpe
+
+pepc: default
+	oracc build
 
 easl: 00etc/easl.tsv
 
@@ -71,3 +74,6 @@ html: 00web/sltab.html
 	00bin/h.sh
 	sudo cp 00web/sltab*.html ${WWW}
 	sudo chmod -R +r ${WWW} /home/oracc/www/fonts
+
+pcpe:
+	(cd w ; make)

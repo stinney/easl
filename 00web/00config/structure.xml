@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<struct:page 
+        xmlns:struct="http://oracc.org/ns/esp-struct/1.0"
+        xmlns="http://www.w3.org/1999/xhtml"
+        file="home.xml" id="home" accesskey="1" type="page">
+  <struct:page file="pepc/introduction.xml" id="pepcintro" type="page"/>
+  <struct:page file="pepc/corpus.xml" id="pepccorpus" type="page">
+    <!--<struct:page file="pepc/csltab.xml" id="csltab" type="page" hide-menu-link="yes"/>-->
+    <struct:page file="pepc/signlists.xml" id="pepcsignlists" type="page"/>
+  </struct:page>
+  <struct:page file="pepc/approaches.xml" id="pepcapproaches" type="page"/>
+  <struct:page file="pepc/principles.xml" id="pepcprinciples" type="page"/>
+  <struct:page file="easl/easl.xml" id="easl" type="page">
+    <!--    <struct:page file="pepc/pepc-ncv-editme.xml" id="repncv" type="page" hide-menu-link="yes"/>-->
+    <!--    <struct:page file="pepc/rep-num.xml" id="repnum" type="page" hide-menu-link="yes"/>-->
+    <!--    <struct:page file="pepc/rep-add.xml" id="repadd" type="page" hide-menu-link="yes"/>-->
+    <!--    <struct:page file="pepc/rep-city.xml" id="repcity" type="page" hide-menu-link="yes"/>-->
+    <!--<struct:page file="pepc/rep-pepc.xml" id="reppepc" type="page" hide-menu-link="yes"/>-->
+    <!--    <struct:page file="pepc/rep-miss.xml" id="repmiss" type="page" hide-menu-link="yes"/>-->
+    <!--    <struct:page file="pepc/rep-not.xml" id="repnot" type="page" hide-menu-link="yes"/>-->
+  </struct:page>
+  <!--
+      <struct:page file="pepc/analysis.xml" id="pepcanalysis" type="page">
+      <struct:page file="pepc/pepc-nc+v.xml" id="pepcncyev" type="page" hide-menu-link="yes"/>
+      <struct:page file="pepc/pepc-nc-v.xml" id="pepcncnov" type="page" hide-menu-link="yes"/>
+      <struct:page file="pepc/pepc-tc-idg.xml" id="pepcapadd" type="page" hide-menu-link="yes"/>
+      </struct:page>
+  -->
+  <!--
+  <struct:page file="pepc/removals.xml" id="pepcremovals" type="page">
+  <struct:page file="pepc/rm-nc-heads.xml" id="rmnchead" type="page" hide-menu-link="yes"/>
+  <struct:page file="pepc/rm-nc-singletons.xml" id="rmncsing" type="page" hide-menu-link="yes"/>
+  <struct:page file="pepc/rm-seq.xml" id="rmseq" type="page" hide-menu-link="yes"/>
+  <struct:page file="pepc/rm-opaque.xml" id="rmopaque" type="page" hide-menu-link="yes"/>
+  <struct:page file="pepc/rm-broken.xml" id="rmbroken" type="page" hide-menu-link="yes"/>
+  <struct:page file="pepc/rm-unattest.xml" id="rmunattest" type="page" hide-menu-link="yes"/>
+  </struct:page>
+  -->
+  <!--<struct:page file="pepc/numbers.xml" id="pepcnumbers" type="page"/>-->
+</struct:page>

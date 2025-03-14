@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<esp:page xmlns:esp="http://oracc.org/ns/esp/1.0" xmlns="http://www.w3.org/1999/xhtml" xmlns:xh="http://www.w3.org/1999/xhtml" xmlns:xpd="http://oracc.org/ns/xpd/1.0">
+  <esp:name>Numbers</esp:name>
+  <esp:title>Numbers</esp:title>
+  <html>
+    <head/>
+    <body>
+      <p>Most PC numbers have been included in a separate proposal,
+      "Archaic Cuneiform Numbers" (ACN).</p>
+      
+      <p>Several pages in the PCSL Sign List provide a concordance of
+      ACN and PCSL and notes on numbers not included in ACN; they are
+      all available from <esp:link
+      url="/pcsl/signlist/ACNConcordance/">ACN Concordance
+      page</esp:link>.</p>
+
+      <p>N57 numbers are proposed for inclusion in PC25.</p>
+    </body>
+  </html>
+</esp:page>

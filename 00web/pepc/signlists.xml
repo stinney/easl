@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<esp:page xmlns:esp="http://oracc.org/ns/esp/1.0" xmlns="http://www.w3.org/1999/xhtml" xmlns:xh="http://www.w3.org/1999/xhtml" xmlns:xpd="http://oracc.org/ns/xpd/1.0">
+  <esp:name>Sign Lists</esp:name>
+  <esp:title>Sign Lists</esp:title>
+  <html>
+    <head/>
+    <body>
+      <p>Prior PC proposals were centred on CDLI-gh, treating it as
+      the definitive assemblage of PC signs at the same time as
+      recognizing several important considerations: CDLI-gh is not
+      100% complete with respect to the PC rcorpus; includes some
+      signs from ED duplicates of PC lexical texts; and includes a
+      handful of signs which are either duplicates or are apparently
+      place-holders from ongoing work on the Schoyen Umma texts that
+      was never completed.</p>
+
+      <p>The published sign list of Uruk Lexical Texts from ATU3
+      (LLATU) was also utilized as a partial control on
+      CDLI-gh. However, three additional lists in a similar format to
+      the LLATU lists were not used in prior proposals, leading to an
+      inadequate understanding of previously published scholarship on
+      the PC repertoire.  Together with LLATU these three previously
+      unutilized lists provide a comprehensive new presentation of the
+      material covered in ZATU and need to be included as part of the
+      foundational data of the PC proposal.</p>
+
+      <p>The four lists and their coverage are:</p>
+
+      <dl>
+	<dt>LLATU</dt>
+	<dd>Lexical lists from Uruk, but with some extraneous signs or
+	forms from ED duplicates, replacing ZATU's coverage of lexical
+	lists</dd>
+	<dt>ATU5</dt>
+	<dd>Administrative texts from Uruk, replacing ATU1 signlist and ZATU</dd>
+	<dt>MSVO1</dt>
+	<dd>Administative texts from Jemdet Nasr, replacing PI and ZATU</dd>
+	<dt>MVSVO4</dt>
+	<dd>Administrative texs from various proveniences, replacing ZATU</dd>
+      </dl>
+
+      <p>The sign lists are based on exhaustive scholarly
+      reassessments of individual portions of the PC corpus and make
+      extensive use of the contrastive notations with subscript
+      letters+numbers, e.g., <code>AB<sub>a</sub></code> and
+      <code>AB<sub>b</sub></code>.  At the same time, these lists
+      gather non-contrastive sign variants under their respective
+      parent signs and this is taken into account in PC25.</p>
+
+      <p>The four modern sign lists are an invaluable complement to
+      CDLI-gh because they represent the carefully considered subset
+      of signs which were vetted for publication whereas CDLI-gh is a
+      working collection of signs.  These sign lists make it clear
+      that the unmarked variants in CDLI-gh are non-contrastive
+      variants as opposed to the contrastive variants marked with
+      subscript letter+number sequences.</p>
+
+      <!-- ALSO ENGLUND'S SIGN-NAME-IS-SIMPLY-MNEMONIC QUOTE -->
+      
+      <p>Importantly, Englund is explicit in the introduction that the
+      reference forms of the signs ("graphemes" in Englund's
+      terminology) are only exemplary forms:</p>
+
+      <blockquote>After each sign name a grapheme is presented which
+      represents the general form of the sign on the tablets
+      cited. This graphic must be understood as merely an orientation
+      in understanding the form a particular sign could take, since in
+      particular the texts from the earliest stage of writing exhibit,
+      to varying degrees, a tolerance of graphemic variation.  (ATU5
+      p.107)</blockquote>
+
+      <esp:sh>Sign Lists/AP24 Concordance</esp:sh>
+
+      <p>A <esp:link
+      url="/pcsl/PC25/Corpus/SignLists/SignLists/">concordance of the
+      published sign lists</esp:link> illustrating the reference forms
+      of each sign in each one is in preparation.</p>
+      
+    </body>
+  </html>
+</esp:page>

@@ -1,0 +1,31 @@
+U+1269B	|AB~a×KU₆~a|	o0900022	28	Unattested; AB~b×KU₆ in unpub. Umma P006307 i 5 but not perfectly clear
+U+1269E	|AB~a×X|	o0900035	31	Unattested
+U+126A0	|AB~a×1(N01)|	o0900025	33	Unattested
+U+126B4	ADDA@t	o0900059	62	Unattested in Uruk; 'ADDA@t?' in UET 2, 196c i 2
+U+12735	|DARA₃~d1×KAR₂~b|	o0900242	738	CDLI-tc only DARA₃~c/d×KAR₂; KAR₂ in CDLI-tc is KAR₂~a/KAR₂~b; revise proposal to include only |DARA₃~d×KAR₂| with SALT variants
+U+12736	|DARA₃~d2×KAR₂~a1|	o0900244	740	see above
+U+1275C	|DU₈~c×X|	o0900307	801	Unattested
+U+12774	DUG~a@t	o0900478	905	Not in CDLI-tc but check L24-XXX
+U+127A0	|DUG~b×U₂~b|	o0900450	989	??? Attested P000015 ii 9
+U+127C1	DUG~c2@t	o0900480	1036	Unattested but check L24-XXX
+U+127EA	ENLIL	o0900537	1106	Unattested; EN~a KID~a/E₂~a in CDLI-tc
+U+12835	|GA₂~a1×3(N57)|	o0900670	1275	P006027 2b1 has |GA₂~a2×3(N57)|; AP23 corrects CDLI-gh but gh is a place-holder glyph; text is unedited Umma, possibly omit sign
+U+12882	|(GI&GI)×X|	o0900825	1415	Unattested
+U+1289B	GIR₂~b	o0900856	1450	Unattested; GIR₂~a only in CDLI-tc
+U+128C9	GUG₂@t	o0900927	1530	Unattested; GUG₂ only in CDLI-tc
+U+12937	KAŠ~b@t	o0901088	1702	Unattested
+U+12967	|KU₆~a+GIŠ|	o0901151	1767	Unattested
+U+1296E	|KUR~a.NUNUZ~a1|	o0901167	1778	CDLI-tc transliterated as 'KUR~a# NUNUZ~a1#'
+U+12A3C	|NI~a×1(N57)|	o0901506	2196	Unattested
+U+12A59	|NINDA₂×(HI~a1.AN.ME~a)|	o0901532	2241	CDLI-tc transliterated as |NINDA₂×(HI.AN.ME~a)|
+U+12AA4	RU@t	o0901672	2361	Unattested
+U+12B66	ŠEN~d	o0901974	2710	@compoundonly ŠEN~d×A but check CUSAS
+U+12B85	ŠITA~b1@g	o0903420	2758	CDLI name for ŠITA~b2@g in AP23/AP24; @compoundonly in |ŠITA~b2@g×HI@g~a|
+U+12B91	ŠU₂~a	o0902039	2802	ŠU₂~a/ŠU₂~b Differentiated only in CDLI-gh; non-contrastive in corpus
+U+12B98	ŠU₂~b	o0902040	2809	see ŠU₂~a
+U+12B9B	|ŠU₂~b.GIŠ|	o0902049	2812	Sequence
+U+12DA3	ZATU779	o0902750	9029	@compoundonly DUG~b×ZATU779 and DUG~b×(NI~a@g.ZATU799)
+U+12DAD	ZATU789	o0902760	9039	@compoundonly DUG~b×ZATU789
+U+12DFE	|3(N57).E₂~b|	o0903241	2082	Sequence
+U+12E07	|4(N57).NI~b|	o0903263	2103	Sequence
+U+12E0E	|1(N58)~a.BAD|	o0903283	2114	Sequence
