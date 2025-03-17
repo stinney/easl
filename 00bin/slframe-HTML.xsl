@@ -221,11 +221,21 @@
 	      <xsl:text>not</xsl:text>
 	    </xsl:if>
 	  </xsl:variable>
+	  <xsl:choose>
+	    <xsl:when test="string-length($not-class)>0">
+	      <xsl:attribute name="class">
+		<xsl:value-of select="$not-class"/>
+	      </xsl:attribute>
+	    </xsl:when>
+	    <xsl:when test="string-length($sq-class)>0">
+	      <xsl:attribute name="class">
+		<xsl:value-of select="$sq-class"/>
+	      </xsl:attribute>
+	    </xsl:when>
+	    <xsl:otherwise/>
+	  </xsl:choose>
 	  <xsl:variable name="class" select="concat($sq-class, ' ', $not-class)"/>
 	  <xsl:if test="string-length($class &gt; 1)">
-	    <xsl:attribute name="class">
-	      <xsl:value-of select="$class"/>
-	    </xsl:attribute>
 	  </xsl:if>
 	  <xsl:if test="count(preceding-sibling::*)=0">
 	    <th class="lname" rowspan="{count(../*)}">

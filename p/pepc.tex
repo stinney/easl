@@ -1,4 +1,5 @@
 \macrofile{html2tex}
+\macrofile{color}
 
 \font\tensy=cmsy10 % math symbols
 \font\sevensy=cmsy7
@@ -9,7 +10,6 @@
 
 \let\everymathextra\relax
 \let\preamble\relax
-\let\not\relax
 
 \let\seq\relax
 \let\lname\relax
@@ -22,14 +22,26 @@
 \let\image\relax
 \let\notes\relax
 \let\stags\relax
+
 \let\sqseq\relax
-\let\sqopq\relax
 \let\sqinv\relax
 \let\sqchr\relax
 \let\ofspc\pcall
 \def\ofs#1#2#3{}
 
 \def\tbodyrule{\noalign{\hrule\vskip3pt plus1pt minus1pt}}
+
+\definecolor{ntgrey}{gray}{0.9}
+\definecolor{sqblue}{rgb}{.9,.98,.99}
+\definecolor{sqgreen}{rgb}{.88,.99,.87}
+\definecolor{sqpink}{rgb}{1,.92,.92}
+\definecolor{sqyellow}{rgb}{1,1,.9}
+
+\def\not{\colorbox{ntgrey}}
+\def\sqchr{\colorbox{sqyellow}}
+\def\sqinv{\colorbox{sqblue}}
+\def\sqopq{\colorbox{sqpink}}
+\def\sqseq{\colorbox{sqgreen}}
 
 \input st
 
