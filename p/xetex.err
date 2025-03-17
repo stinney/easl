@@ -16,10 +16,10 @@ kdebug:  program enabled = 0
 kdebug:  program enable level = 0
 kdebug:  open files in binary mode = 0
 kdebug:  numeric format value = 8
-kdebug:fopen(/usr/local/texlive/2025/texmf.cnf, r) => 0x4183c80
-kdebug:fclose(0x4183c80) => 0
-kdebug:fopen(/usr/local/texlive/2025/texmf-dist/web2c/texmf.cnf, r) => 0x4183c80
-kdebug:fclose(0x4183c80) => 0
+kdebug:fopen(/usr/local/texlive/2025/texmf.cnf, r) => 0x4181d00
+kdebug:fclose(0x4181d00) => 0
+kdebug:fopen(/usr/local/texlive/2025/texmf-dist/web2c/texmf.cnf, r) => 0x4181d00
+kdebug:fclose(0x4181d00) => 0
 kdebug:Search path for ls-R files (from texmf.cnf)
 kdebug:  = /usr/local/texlive/texmf-local:/usr/local/texlive/2025/texmf-config:/usr/local/texlive/2025/texmf-var:/usr/local/texlive/2025/texmf-dist
 kdebug:  before expansion = {!!$TEXMFLOCAL,!!$TEXMFSYSCONFIG,!!$TEXMFSYSVAR,!!$TEXMFDIST}
@@ -37,12 +37,12 @@ kdebug:  program enabled = 0
 kdebug:  program enable level = 0
 kdebug:  open files in binary mode = 0
 kdebug:  numeric format value = 9
-kdebug:fopen(/usr/local/texlive/2025/texmf-config/ls-R, r) => 0x4183c80
-kdebug:fclose(0x4183c80) => 0
-kdebug:fopen(/usr/local/texlive/2025/texmf-var/ls-R, r) => 0x4183c80
-kdebug:fclose(0x4183c80) => 0
-kdebug:fopen(/usr/local/texlive/2025/texmf-dist/ls-R, r) => 0x4183c80
-kdebug:fclose(0x4183c80) => 0
+kdebug:fopen(/usr/local/texlive/2025/texmf-config/ls-R, r) => 0x4181d00
+kdebug:fclose(0x4181d00) => 0
+kdebug:fopen(/usr/local/texlive/2025/texmf-var/ls-R, r) => 0x4181d00
+kdebug:fclose(0x4181d00) => 0
+kdebug:fopen(/usr/local/texlive/2025/texmf-dist/ls-R, r) => 0x4181d00
+kdebug:fclose(0x4181d00) => 0
 kdebug:Search path for tex files (from TEXINPUTS environment variable)
 kdebug:  = .:/home/stinney/.texlive2025/texmf-config/tex/oracctex//:/home/stinney/.texlive2025/texmf-var/tex/oracctex//:/home/stinney/texmf/tex/oracctex//:!!/usr/local/texlive/texmf-local/tex/oracctex//:!!/usr/local/texlive/2025/texmf-config/tex/oracctex//:!!/usr/local/texlive/2025/texmf-var/tex/oracctex//:!!/usr/local/texlive/2025/texmf-dist/tex/oracctex//:/home/stinney/.texlive2025/texmf-config/tex/generic//:/home/stinney/.texlive2025/texmf-var/tex/generic//:/home/stinney/texmf/tex/generic//:!!/usr/local/texlive/texmf-local/tex/generic//:!!/usr/local/texlive/2025/texmf-config/tex/generic//:!!/usr/local/texlive/2025/texmf-var/tex/generic//:!!/usr/local/texlive/2025/texmf-dist/tex/generic//:/home/stinney/.texlive2025/texmf-config/tex/latex//:/home/stinney/.texlive2025/texmf-var/tex/latex//:/home/stinney/texmf/tex/latex//:!!/usr/local/texlive/texmf-local/tex/latex//:!!/usr/local/texlive/2025/texmf-config/tex/latex//:!!/usr/local/texlive/2025/texmf-var/tex/latex//:!!/usr/local/texlive/2025/texmf-dist/tex/latex//:/home/stinney/.texlive2025/texmf-config/tex///:/home/stinney/.texlive2025/texmf-var/tex///:/home/stinney/texmf/tex///:!!/usr/local/texlive/texmf-local/tex///:!!/usr/local/texlive/2025/texmf-config/tex///:!!/usr/local/texlive/2025/texmf-var/tex///:!!/usr/local/texlive/2025/texmf-dist/tex///:/home/oracc/lib/tex/:.:/home/oracc/lib/tex/:.
 kdebug:  before expansion = :/home/oracc/lib/tex/:.:/home/oracc/lib/tex/:.
@@ -60,8 +60,8 @@ kdebug:  program enabled = 0
 kdebug:  program enable level = 0
 kdebug:  open files in binary mode = 0
 kdebug:  numeric format value = 26
-kdebug:fopen(./pepc.tex, r) => 0x4183c80
-kdebug:fclose(0x4183c80) => 0
+kdebug:fopen(./pepc.tex, r) => 0x4181d00
+kdebug:fclose(0x4181d00) => 0
 kdebug:Search path for fmt files (from TEXFORMATS environment variable)
 kdebug:  = /home/oracc/lib/tex/:.
 kdebug:  before expansion = /home/oracc/lib/tex/:.
@@ -79,103 +79,46 @@ kdebug:  program enabled = 1
 kdebug:  program enable level = 1
 kdebug:  open files in binary mode = 1
 kdebug:  numeric format value = 10
-kdebug:fopen(/home/oracc/lib/tex/oracctex.fmt, rb) => 0x4183c80
-kdebug:fopen(pepc.tex, rb) => 0x418c770
-kdebug:fopen(pepc.log, wb) => 0x4286090
-kdebug:fopen(/home/oracc/lib/tex/html2tex.tex, rb) => 0x4288fb0
-kdebug:Search path for afm files (from TEXFONTS environment variable)
+kdebug:fopen(/home/oracc/lib/tex/oracctex.fmt, rb) => 0x4181d00
+kdebug:fopen(pepc.tex, rb) => 0x418a670
+kdebug:fopen(pepc.log, wb) => 0x4283f90
+kdebug:fopen(/home/oracc/lib/tex/html2tex.tex, rb) => 0x4286eb0
+kdebug:Search path for opentype fonts files (from TEXFONTS environment variable)
 kdebug:  = /home/oracc/lib/tex:/home/oracc/lib/tex/fonts:.
 kdebug:  before expansion = /home/oracc/lib/tex:/home/oracc/lib/tex/fonts:.
 kdebug:  application override path = (none)
 kdebug:  application config file path = (none)
-kdebug:  texmf.cnf path = $TEXMFDOTDIR:$TEXMF/fonts/afm//:$OSFONTDIR//
+kdebug:  texmf.cnf path = $TEXMFDOTDIR:$TEXMF/fonts/{opentype,truetype}//:$OSFONTDIR//
 kdebug:  compile-time path = /nonesuch
-kdebug:  environment variables = AFMFONTS TEXFONTS
-kdebug:  default suffixes = .afm
-kdebug:  other suffixes = (none)
-kdebug:  search only with suffix = 0
-kdebug:  runtime generation program = (none)
-kdebug:  runtime generation command = (none)
-kdebug:  program enabled = 0
-kdebug:  program enable level = 0
-kdebug:  open files in binary mode = 0
-kdebug:  numeric format value = 4
-kdebug:Search path for tfm files (from TEXFONTS environment variable)
-kdebug:  = /home/oracc/lib/tex:/home/oracc/lib/tex/fonts:.
-kdebug:  before expansion = /home/oracc/lib/tex:/home/oracc/lib/tex/fonts:.
-kdebug:  application override path = (none)
-kdebug:  application config file path = (none)
-kdebug:  texmf.cnf path = $TEXMFDOTDIR:{$TEXMF/fonts,$VARTEXFONTS}/tfm//
-kdebug:  compile-time path = /nonesuch
-kdebug:  environment variables = TFMFONTS TEXFONTS
-kdebug:  default suffixes = .tfm
+kdebug:  environment variables = OPENTYPEFONTS TEXFONTS
+kdebug:  default suffixes = .otf .OTF
 kdebug:  other suffixes = (none)
 kdebug:  search only with suffix = 1
-kdebug:  runtime generation program = mktextfm
-kdebug:  runtime generation command = mktextfm
-kdebug:  program enabled = 1
-kdebug:  program enable level = 1
+kdebug:  runtime generation program = (none)
+kdebug:  runtime generation command = (none)
+kdebug:  program enabled = 0
+kdebug:  program enable level = 0
 kdebug:  open files in binary mode = 1
-kdebug:  numeric format value = 3
-kdebug:Search path for map files (from TEXFONTS environment variable)
+kdebug:  numeric format value = 47
+kdebug:Search path for truetype fonts files (from TEXFONTS environment variable)
 kdebug:  = /home/oracc/lib/tex:/home/oracc/lib/tex/fonts:.
 kdebug:  before expansion = /home/oracc/lib/tex:/home/oracc/lib/tex/fonts:.
 kdebug:  application override path = (none)
 kdebug:  application config file path = (none)
-kdebug:  texmf.cnf path = $TEXMFDOTDIR:$TEXMF/fonts/map/{$progname,pdftex,dvips,}//
+kdebug:  texmf.cnf path = $TEXMFDOTDIR:$TEXMF/fonts/{truetype,opentype}//:$OSFONTDIR//
 kdebug:  compile-time path = /nonesuch
-kdebug:  environment variables = TEXFONTMAPS TEXFONTS
-kdebug:  default suffixes = .map
+kdebug:  environment variables = TTFONTS TEXFONTS
+kdebug:  default suffixes = .ttf .ttc .TTF .TTC .dfont
 kdebug:  other suffixes = (none)
 kdebug:  search only with suffix = 0
 kdebug:  runtime generation program = (none)
 kdebug:  runtime generation command = (none)
 kdebug:  program enabled = 0
 kdebug:  program enable level = 0
-kdebug:  open files in binary mode = 0
-kdebug:  numeric format value = 11
-
-kpathsea: Running mktextfm PC-all
-/usr/local/texlive/2025/texmf-dist/web2c/mktexnam: Could not map source abbreviation  for PC-all.
-/usr/local/texlive/2025/texmf-dist/web2c/mktexnam: Need to update ?
-mktextfm: Running mf-nowin -progname=mf \mode:=ljfour; mag:=1; ; nonstopmode; input PC-all
-This is METAFONT, Version 2.71828182 (TeX Live 2025) (preloaded base=mf)
-
-kpathsea: Running mktexmf PC-all
-
-! I can't find file `PC-all'.
-<*> ...ljfour; mag:=1; ; nonstopmode; input PC-all
-                                                  
-Please type another input file name
-! Emergency stop.
-<*> ...ljfour; mag:=1; ; nonstopmode; input PC-all
-                                                  
-Transcript written on mfput.log.
-grep: PC-all.log: No such file or directory
-mktextfm: `mf-nowin -progname=mf \mode:=ljfour; mag:=1; ; nonstopmode; input PC-all' failed to make PC-all.tfm.
-kdebug:fopen(missfont.log, ab) => 0x447b660
-kpathsea: Appending font creation commands to missfont.log.
-
-kpathsea: Running mktextfm PC25
-/usr/local/texlive/2025/texmf-dist/web2c/mktexnam: Could not map source abbreviation  for PC25.
-/usr/local/texlive/2025/texmf-dist/web2c/mktexnam: Need to update ?
-mktextfm: Running mf-nowin -progname=mf \mode:=ljfour; mag:=1; ; nonstopmode; input PC25
-This is METAFONT, Version 2.71828182 (TeX Live 2025) (preloaded base=mf)
-
-kpathsea: Running mktexmf PC25
-
-! I can't find file `PC25'.
-<*> ...:=ljfour; mag:=1; ; nonstopmode; input PC25
-                                                  
-Please type another input file name
-! Emergency stop.
-<*> ...:=ljfour; mag:=1; ; nonstopmode; input PC25
-                                                  
-Transcript written on mfput.log.
-grep: PC25.log: No such file or directory
-mktextfm: `mf-nowin -progname=mf \mode:=ljfour; mag:=1; ; nonstopmode; input PC25' failed to make PC25.tfm.
-kdebug:fclose(0x4288fb0) => 0
-kdebug:fopen(st.tex, rb) => 0x4288fb0
-kdebug:fclose(0x4288fb0) => 0
-kdebug:fclose(0x418c770) => 0
-kdebug:fclose(0x4286090) => 0
+kdebug:  open files in binary mode = 1
+kdebug:  numeric format value = 36
+kdebug:fclose(0x4286eb0) => 0
+kdebug:fopen(st.tex, rb) => 0x4286eb0
+kdebug:fclose(0x4286eb0) => 0
+kdebug:fclose(0x418a670) => 0
+kdebug:fclose(0x4283f90) => 0

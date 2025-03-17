@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<struct:page xmlns:struct="http://oracc.org/ns/esp-struct/1.0" xmlns="http://www.w3.org/1999/xhtml" url="/" file="home.xml" id="home" accesskey="1" type="page">
+<struct:page xmlns:struct="http://oracc.org/ns/esp-struct/1.0" xmlns="http://www.w3.org/1999/xhtml" url="/" file="home.xml" id="home" accesskey="1" type="page" xmlns:tex="http://oracc.org/ns/tex/1.0">
   <esp:name xmlns:esp="http://oracc.org/ns/esp/1.0">Home</esp:name>
   <esp:title xmlns:esp="http://oracc.org/ns/esp/1.0">Principles for Encoding Proto-Cuneiform</esp:title>
   <html>
@@ -73525,9 +73525,10 @@
 	    background</span> but these have not yet been
 	    systematically reviewed.</p>
               </div>
-              <table class="sltab borders" id="d4e56330">
+              <table class="sltab borders" id="d4e56330" tex:preamble-row="1">
                 <thead id="d4e56331">
                   <tr id="d4e56332">
+                    <th class="lname"></th>
                     <th class="lname" colspan="2" id="d4e56333">Entry</th>
                     <th class="names" id="d4e56335">Names</th>
                     <th class="glyph" id="d4e56337">PC-font</th>
