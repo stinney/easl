@@ -161,10 +161,10 @@
 	  </xsl:when>
 	</xsl:choose>
 	</div>
-	<table class="sltab borders">
+	<table class="sltab borders tbodyrules">
 	  <thead>
 	    <tr>
-	      <th class="lname" colspan="2">Entry</th>
+	      <th class="lname">Entry</th> <!-- colspan="2" -->
 	      <th class="names">Names</th>
 	      <th class="glyph">PC-font</th>
 	      <th class="image">CDLI-gh</th>
@@ -232,6 +232,7 @@
 	      <xsl:value-of select="../@n"/>
 	    </th>
 	  </xsl:if>
+	  <!--
 	  <xsl:choose>
 	    <xsl:when test="count(../*) > 1">
 	      <th class="lname"><xsl:value-of select="@xml:id"/></th>
@@ -239,7 +240,8 @@
 	    <xsl:otherwise>
 	      <td/>
 	    </xsl:otherwise>
-	  </xsl:choose>
+	    </xsl:choose>
+	  -->
 	  <td>
 	    <xsl:variable name="oid">
 	      <xsl:choose>
@@ -254,7 +256,7 @@
 	      </xsl:choose>
 	    </xsl:variable>
 	    <esp:link name="{$oid}" url="/pcsl/{../@oid}" target="_blank">
-	      <div class="names">
+	      <div class="vbox names">
 		<div class="sname"><xsl:value-of select="@sn"/></div>
 		<div class="uname"><xsl:value-of select="@u"/></div>
 		<xsl:if test="../@tags">
@@ -268,7 +270,7 @@
 	    </esp:link>
 	  </td>
 	  <td class="ofs-pc ofs-200">
-	    <div class="chars">
+	    <div class="vbox chars">
 	      <xsl:if test="not(f)">
 		<div>
 		  <span class="{@class}">
