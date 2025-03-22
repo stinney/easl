@@ -35,6 +35,11 @@ rows: 00raw/${SL}-rows.tsv
 
 font: /home/oracc/www/fonts/${SLfont}
 
+# 2025-03-21: easl.tsv and thus EASL numbers are fixed so we no longer support
+# rebuilding easl.tsv dynamically.
+x00etc/easl.tsv:
+	true
+
 00etc/easl.tsv: 00etc/gh-index.xml 00bin/gh-cpc-tsv.xsl 00bin/easl-*.plx
 	xsltproc 00bin/gh-cpc-tsv.xsl 00etc/gh-index.xml >01tmp/easl-gh.tsv
 	00bin/easl-oid.plx >01tmp/easl-oid.tsv

@@ -26,6 +26,9 @@ my %rm = load_map($rm, 1, 0); my %rm_seen = ();
 
 my $sm = "$sl-names.tsv";
 my %sm = load_map($sm, 0, 0);
+my @x = `cat ../00etc/xnames.tsv`; chomp @x; foreach (@x) { my($u,$n)=split(/\t/,$_); $sm{$u}=$n;}
+
+open(N,'>names.dump'); print N Dumper \%sm; close(N);
 
 my $tm = "$sl-tags.tsv";
 my %tm = load_map($tm, 0, 0);
@@ -42,7 +45,7 @@ while (<>) {
     chomp;
     warn "$0: duplicate slframe entry $_\n" and next if $seen{$_}++;
     $sign_flag = s/◀//;
-    my($sl,$num,$sub,$feat) = (/^($SL)(\d{3,4})(·?[a-z]+)?(\.\S+)?/o);
+    my($sl,$num,$sub,$feat) = (/^($SL)(\d{3,4}a?)(·?[a-z]+)?(\.\S+)?/o);
     $sub = '-' unless $sub;
     $feat = '-' unless $feat;
     if ($sl) {
